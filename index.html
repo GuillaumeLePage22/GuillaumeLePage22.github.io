@@ -1,117 +1,111 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Guillaume Le Page - Data Analyst</title>
-    <!-- POLICES -->
-    <link href="https://fonts.googleapis.com/css?family=Anton:400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background: #101417;
-            color: #eaeaea;
-            font-family: 'Montserrat', Arial, sans-serif;
-            margin: 0;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-        .hero-center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            position: relative;
-            padding-left: 50px;
-        }
-        .circle-img {
-            position: absolute;
-            left: calc(50% - 180px);
-            top: 50%;
-            transform: translateY(-50%);
-            width: 600px;
-            height: 600px;
-            border-radius: 50%;
-            overflow: hidden;
-            z-index: 1;
-            box-shadow: 0 0 60px #101417 inset;
-            background: rgba(160, 220, 250, 0.15);
-        }
-        .circle-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.94) contrast(1.05);
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: left;
-            width: 600px;
-            left: 120px;
-        }
-        .hero-content h1 {
-            font-family: 'Anton', Arial, sans-serif;
-            font-size: 100px;
-            color: #fff;
-            font-weight: 900;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin: 0 0 10px 0;
-            line-height: 0.93;
-            text-shadow: 4px 4px 0 #1a2026;
-        }
-        .role {
-            font-family: 'Anton', Arial, sans-serif;
-            font-size: 26px;
-            color: #82fff8;
-            font-weight: 900;
-            letter-spacing: 2px;
-            margin-bottom: 38px;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 0 #1a2026;
-        }
-        .hero-content p {
-            font-family: 'Montserrat', Arial, sans-serif;
-            font-size: 19px;
-            color: #b2bac6;
-            margin-bottom: 44px;
-            font-weight: 400;
-            line-height: 1.8;
-        }
-        .cta {
-            display: inline-block;
-            padding: 16px 44px;
-            border: 2px solid #82fff8;
-            color: #82fff8;
-            background: transparent;
-            font-size: 21px;
-            border-radius: 30px;
-            font-family: 'Montserrat', Arial, sans-serif;
-            font-weight: 700;
-            text-decoration: none;
-            transition: 0.2s;
-        }
-        .cta:hover {
-            background: #82fff8;
-            color: #101417;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Ton Nom - Data Analyst</title>
+<link href="https://fonts.googleapis.com/css?family=Anton:400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,900&display=swap" rel="stylesheet">
+<style>
+body {
+    background: #101417;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Montserrat', Arial, sans-serif;
+    overflow-x: hidden;
+    color: #eaeaea;
+}
+.hero-center {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    padding-left: 50px;
+    justify-content: center;
+}
+.circle-img {
+    position: absolute;
+    left: calc(50% - 180px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: inset 0 0 60px #101417;
+    background: rgba(160,220,250,0.15);
+    z-index: 1;
+}
+.circle-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.94) contrast(1.05);
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 600px;
+    left: 120px;
+    text-align: left;
+}
+.hero-content h1 {
+    font-family: 'Anton', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 100px;
+    letter-spacing: 4px;
+    margin: 0 0 10px 0;
+    line-height: 0.93;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 0 #1a2026;
+}
+.role {
+    font-family: 'Anton', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 26px;
+    letter-spacing: 2px;
+    margin-bottom: 38px;
+    color: #82fff8;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0 #1a2026;
+}
+.hero-content p {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 1.8;
+    margin-bottom: 44px;
+    color: #b2bac6;
+}
+.cta {
+    padding: 16px 44px;
+    border-radius: 30px;
+    border: 2px solid #82fff8;
+    color: #82fff8;
+    font-weight: 700;
+    font-family: 'Montserrat', Arial, sans-serif;
+    text-decoration: none;
+    font-size: 21px;
+    background: transparent;
+    transition: 0.2s;
+}
+.cta:hover {
+    background: #82fff8;
+    color: #101417;
+}
+</style>
 </head>
 <body>
-    <div class="hero-center">
-        <div class="circle-img">
-            <img src="photo.jpg" alt="Guillaume Le Page photo">
-        </div>
-        <div class="hero-content">
-            <h1>Guillaume<br>Le Page</h1>
-            <div class="role">DATA ANALYST</div>
-            <p>
-                Passionné par l’analyse de données et la visualisation. Diplômé en SQL, Python, Power BI.<br>
-                Mon objectif est d’utiliser la data pour aider à la prise de décision et valoriser tout type de projet.<br>
-                Motivé, curieux et toujours prêt à apprendre de nouvelles techniques !
-            </p>
-            <a href="cv.pdf" class="cta" download>Télécharger le CV 💾</a>
-        </div>
+<div class="hero-center">
+    <div class="circle-img">
+        <img src="photo.jpg" alt="Photo professionnelle">
     </div>
+    <div class="hero-content">
+        <h1>Ton<br>Nom</h1>
+        <div class="role">DATA ANALYST</div>
+        <p>Voici une courte biographie ou présentation. Mets ici ton texte de présentation, tes compétences, objectifs, etc.</p>
+        <a href="cv.pdf" class="cta" download>Télécharger le CV 💾</a>
+    </div>
+</div>
 </body>
 </html>
