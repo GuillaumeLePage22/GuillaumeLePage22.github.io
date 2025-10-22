@@ -2,51 +2,90 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Guillaume Le Page - Data Analyst Portfolio</title>
+    <title>Ton Nom - Data Analyst</title>
     <style>
         body {
-            background-color: #23272f;
-            color: #f5f5f5;
-            font-family: Arial, sans-serif;
+            background: #101417;
+            color: #eaeaea;
+            font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 0;
+            min-height: 100vh;
         }
-        .container {
-            max-width: 900px;
-            margin: 60px auto;
-            background: #282c34;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
+        .circle-img {
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 45px;
+            box-shadow: 0 0 40px #101417 inset;
         }
-        h2 {
-            color: #4fd8fd;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-size: 1.5em;
+        .circle-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
-        ul {
-            list-style: square;
+        .hero-text {
+            max-width: 600px;
+        }
+        .hero-text h1 {
+            font-size: 56px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin: 0 0 10px 0;
+        }
+        .hero-text .role {
+            color: #77e3f9;
+            font-size: 16px;
             margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+        .hero-text p {
+            font-size: 17px;
+            line-height: 1.75;
+            color: #b2bac6;
+            margin-bottom: 35px;
+        }
+        .cta {
+            display: inline-block;
+            padding: 13px 36px;
+            border: 2px solid #77e3f9;
+            color: #77e3f9;
+            background: transparent;
+            font-size: 16px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .cta:hover {
+            background: #77e3f9;
+            color: #101417;
+        }
+        /* Pour mobile */
+        @media (max-width: 900px) {
+            .hero { flex-direction: column; text-align: center; }
+            .circle-img { margin-right: 0; margin-bottom: 35px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Guillaume Le Page</h1>
-        <h2>Data Analyst</h2>
-        <h2>Éducation</h2>
-        <ul>
-            <li>SQL</li>
-            <li>Python</li>
-        </ul>
-        <h2>Travail</h2>
-        <p>Ajoute tes projets ou expériences ici.</p>
+    <div class="hero">
+        <div class="circle-img">
+            <img src="photo.jpg" alt="Ta Photo">
+        </div>
+        <div class="hero-text">
+            <h1>TON NOM</h1>
+            <div class="role">DATA ANALYST</div>
+            <p>Je suis un data analyst passionné par les données et l’analyse. Formé en SQL, Python et Power BI, je conçois des visualisations impactantes pour aider les entreprises à mieux piloter leurs activités. Enthousiaste, autonome et curieux, je cherche sans cesse à progresser et relever de nouveaux défis.</p>
+            <a href="toncv.pdf" class="cta">Download CV ✨</a>
+        </div>
     </div>
 </body>
 </html>
