@@ -2,28 +2,33 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Ton Nom - Data Analyst</title>
+    <title>Guillaume Le Page - Data Analyst</title>
+    <!-- POLICES Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap" rel="stylesheet">
     <style>
         body {
             background: #101417;
             color: #eaeaea;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Montserrat', Arial, sans-serif;
             margin: 0;
             min-height: 100vh;
         }
         .hero {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             min-height: 100vh;
+            padding-left: 8vw;
         }
         .circle-img {
-            width: 380px;
-            height: 380px;
+            width: 370px;
+            height: 370px;
             border-radius: 50%;
             overflow: hidden;
             margin-right: 45px;
             box-shadow: 0 0 40px #101417 inset;
+            flex-shrink: 0;
         }
         .circle-img img {
             width: 100%;
@@ -34,57 +39,75 @@
             max-width: 600px;
         }
         .hero-text h1 {
-            font-size: 56px;
-            font-weight: bold;
-            letter-spacing: 2px;
+            font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+            font-size: 70px;
+            color: #fff;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
             margin: 0 0 10px 0;
+            line-height: 1;
+            text-shadow: 2px 2px 0 #191c1f;
         }
         .hero-text .role {
-            color: #77e3f9;
-            font-size: 16px;
-            margin-bottom: 30px;
+            font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+            font-size: 18px;
+            color: #79ffe1;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 35px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: bold;
+            text-shadow: 1px 1px 0 #191c1f;
         }
         .hero-text p {
+            font-family: 'Montserrat', Arial, sans-serif;
             font-size: 17px;
-            line-height: 1.75;
             color: #b2bac6;
             margin-bottom: 35px;
+            font-weight: 400;
+            line-height: 1.75;
         }
         .cta {
             display: inline-block;
-            padding: 13px 36px;
-            border: 2px solid #77e3f9;
-            color: #77e3f9;
+            padding: 14px 38px;
+            border: 2px solid #79ffe1;
+            color: #79ffe1;
             background: transparent;
-            font-size: 16px;
+            font-size: 17px;
             border-radius: 25px;
             text-decoration: none;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
             transition: all 0.2s;
+            margin-top: 20px;
         }
         .cta:hover {
-            background: #77e3f9;
+            background: #79ffe1;
             color: #101417;
         }
-        /* Pour mobile */
+        /* Responsive mobile */
         @media (max-width: 900px) {
-            .hero { flex-direction: column; text-align: center; }
-            .circle-img { margin-right: 0; margin-bottom: 35px; }
+            .hero { flex-direction: column; text-align: center; padding: 30px 0 0 0; }
+            .circle-img { margin-right: 0; margin-bottom: 30px; }
+            .hero-text h1 { font-size: 40px; }
         }
     </style>
 </head>
 <body>
     <div class="hero">
+        <!-- Place ici ta photo de profil, nommée 'photo.jpg' -->
         <div class="circle-img">
-            <img src="photo.jpg" alt="Ta Photo">
+            <img src="photo.jpg" alt="Guillaume Le Page photo">
         </div>
         <div class="hero-text">
-            <h1>TON NOM</h1>
+            <h1>Guillaume<br>Le Page</h1>
             <div class="role">DATA ANALYST</div>
-            <p>Je suis un data analyst passionné par les données et l’analyse. Formé en SQL, Python et Power BI, je conçois des visualisations impactantes pour aider les entreprises à mieux piloter leurs activités. Enthousiaste, autonome et curieux, je cherche sans cesse à progresser et relever de nouveaux défis.</p>
-            <a href="toncv.pdf" class="cta">Download CV ✨</a>
+            <p>
+                Passionné par l’analyse de données et la visualisation. Diplômé en SQL, Python, Power BI. Mon objectif est d’utiliser la data pour aider à la prise de décision et valoriser tout type de projet.
+                Motivé, curieux et toujours prêt à apprendre de nouvelles techniques !
+            </p>
+            <!-- Mets ici le nom de ton CV PDF -->
+            <a href="cv.pdf" class="cta" download>Télécharger le CV 💾</a>
         </div>
     </div>
 </body>
