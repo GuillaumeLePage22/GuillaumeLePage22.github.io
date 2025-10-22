@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Guillaume Le Page - Data Analyst</title>
-    <!-- POLICES Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Orbitron:700,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap" rel="stylesheet">
+    <!-- POLICES -->
+    <link href="https://fonts.googleapis.com/css?family=Anton:400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,900&display=swap" rel="stylesheet">
     <style>
         body {
             background: #101417;
@@ -13,100 +13,117 @@
             font-family: 'Montserrat', Arial, sans-serif;
             margin: 0;
             min-height: 100vh;
+            overflow-x: hidden;
         }
-        .hero {
+        .hero-center {
             display: flex;
+            justify-content: center;
             align-items: center;
-            justify-content: flex-start;
-            min-height: 100vh;
-            padding-left: 8vw;
+            height: 100vh;
+            position: relative;
         }
         .circle-img {
-            width: 370px;
-            height: 370px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-60%, -51%);
+            width: 620px;
+            height: 620px;
             border-radius: 50%;
             overflow: hidden;
-            margin-right: 45px;
-            box-shadow: 0 0 40px #101417 inset;
-            flex-shrink: 0;
+            z-index: 1;
+            box-shadow: 0 0 60px #101417 inset;
+            animation: bubble 4s infinite ease-in-out;
+            background: rgba(160,220,250,0.15);
         }
         .circle-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            filter: brightness(0.94) contrast(1.05);
         }
-        .hero-text {
-            max-width: 600px;
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: left;
+            width: 620px;
+            left: 40px;
         }
-        .hero-text h1 {
-            font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
-            font-size: 70px;
+        .hero-content h1 {
+            font-family: 'Anton', Arial, sans-serif;
+            font-size: 100px;
             color: #fff;
             font-weight: 900;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             text-transform: uppercase;
             margin: 0 0 10px 0;
-            line-height: 1;
-            text-shadow: 2px 2px 0 #191c1f;
+            line-height: 0.93;
+            text-shadow: 4px 4px 0 #1a2026;
         }
-        .hero-text .role {
-            font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
-            font-size: 18px;
-            color: #79ffe1;
-            font-weight: 700;
+        .role {
+            font-family: 'Anton', Arial, sans-serif;
+            font-size: 26px;
+            color: #82fff8;
+            font-weight: 900;
             letter-spacing: 2px;
-            margin-bottom: 35px;
+            margin-bottom: 38px;
             text-transform: uppercase;
-            text-shadow: 1px 1px 0 #191c1f;
+            text-shadow: 2px 2px 0 #1a2026;
         }
-        .hero-text p {
+        .hero-content p {
             font-family: 'Montserrat', Arial, sans-serif;
-            font-size: 17px;
+            font-size: 19px;
             color: #b2bac6;
-            margin-bottom: 35px;
+            margin-bottom: 44px;
             font-weight: 400;
-            line-height: 1.75;
+            line-height: 1.8;
         }
         .cta {
             display: inline-block;
-            padding: 14px 38px;
-            border: 2px solid #79ffe1;
-            color: #79ffe1;
+            padding: 16px 44px;
+            border: 2px solid #82fff8;
+            color: #82fff8;
             background: transparent;
-            font-size: 17px;
-            border-radius: 25px;
-            text-decoration: none;
+            font-size: 21px;
+            border-radius: 30px;
             font-family: 'Montserrat', Arial, sans-serif;
             font-weight: 700;
-            transition: all 0.2s;
-            margin-top: 20px;
+            text-decoration: none;
+            transition: 0.2s;
         }
         .cta:hover {
-            background: #79ffe1;
+            background: #82fff8;
             color: #101417;
         }
-        /* Responsive mobile */
-        @media (max-width: 900px) {
-            .hero { flex-direction: column; text-align: center; padding: 30px 0 0 0; }
-            .circle-img { margin-right: 0; margin-bottom: 30px; }
-            .hero-text h1 { font-size: 40px; }
+        @keyframes bubble {
+            0%   { transform: translate(-60%, -51%) scale(1); }
+            50%  { transform: translate(-60%, -56%) scale(1.06); }
+            100% { transform: translate(-60%, -51%) scale(1); }
+        }
+        /* Mobile */
+        @media (max-width: 950px) {
+            .hero-center{flex-direction: column;}
+            .hero-content{ position:relative; left:0; width:90vw;}
+            .circle-img{
+                position: static;
+                margin-bottom: 30px;
+                width: 60vw; height: 60vw; min-width:300px; min-height:300px;}
+            .hero-content h1{ font-size:44px;}
         }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <!-- Place ici ta photo de profil, nommée 'photo.jpg' -->
+    <div class="hero-center">
         <div class="circle-img">
             <img src="photo.jpg" alt="Guillaume Le Page photo">
         </div>
-        <div class="hero-text">
+        <div class="hero-content">
             <h1>Guillaume<br>Le Page</h1>
             <div class="role">DATA ANALYST</div>
             <p>
                 Passionné par l’analyse de données et la visualisation. Diplômé en SQL, Python, Power BI. Mon objectif est d’utiliser la data pour aider à la prise de décision et valoriser tout type de projet.
                 Motivé, curieux et toujours prêt à apprendre de nouvelles techniques !
             </p>
-            <!-- Mets ici le nom de ton CV PDF -->
             <a href="cv.pdf" class="cta" download>Télécharger le CV 💾</a>
         </div>
     </div>
