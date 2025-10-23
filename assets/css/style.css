@@ -1082,7 +1082,7 @@ visibility: hidden;
 .experience-details h3 {
   margin: 0 0 7px 0;
   font-size: 1.19em;
-  font-weight: 700;
+  font-weight: 900;
   color: #f3f3f3;
   letter-spacing: 0.2px;
 }
@@ -1111,7 +1111,9 @@ visibility: hidden;
   color: #e4e4e4;
   font-weight: 400;
 }
-
+.experience-details li {
+  margin-bottom: 3px; /* ou la valeur de ton choix */
+}
 .image-grid img.hidden {
 display: none;
 }
