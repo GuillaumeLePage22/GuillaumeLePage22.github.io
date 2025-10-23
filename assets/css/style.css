@@ -244,7 +244,7 @@ body.nav-active { overflow: hidden; }
   --item-gap: 12px;
 
   margin-block-start: 60px;
-  overflow: hidden;
+
 }
 
 .slider-container {
@@ -305,7 +305,7 @@ body.nav-active { overflow: hidden; }
 .img-holder {
   aspect-ratio: var(--width) / var(--height);
   background-color: var(--white_a5);
-  overflow: hidden;
+
 }
 
 .img-cover {
@@ -483,7 +483,7 @@ body.nav-active { overflow: hidden; }
 
 .hero-banner {
   border-radius: var(--blob-radius);
-  overflow: hidden;
+
   animation: blobAnim 30s linear infinite;
 }
 
