@@ -1121,17 +1121,4 @@ display: none;
 .experience-details strong {
   margin-bottom: 3px;
   display: block;
-}
-.exp-intro {
-  margin-top: 18px; /* espace au-dessus, augmente cette valeur si besoin */
-  margin-bottom: -7px; /* réduit l'espace avec la liste en-dessous */
-}
-.exp-list {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 25px;
-  line-height: 1.6;
-}
-.exp-list li {
-  margin-bottom: 2px; /* ajuste pour compacter encore les puces si tu veux */
-}
+
