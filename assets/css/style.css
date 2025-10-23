@@ -1081,10 +1081,11 @@ visibility: hidden;
 }
 .experience-details h3 {
   margin: 0 0 7px 0;
-  font-size: 1.7em;
+  font-size: 1.9em;
   font-weight: 700;
   color: #f3f3f3;
   letter-spacing: 0.2px;
+  font-family: 'Syne', Arial, sans-serif;
 }
 .exp-structure {
   display: flex;
