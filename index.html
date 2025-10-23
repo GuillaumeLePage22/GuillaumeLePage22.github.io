@@ -1,111 +1,143 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Ton Nom - Data Analyst</title>
-<link href="https://fonts.googleapis.com/css?family=Anton:400&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,900&display=swap" rel="stylesheet">
-<style>
-body {
-    background: #101417;
-    margin: 0;
-    height: 100vh;
-    font-family: 'Montserrat', Arial, sans-serif;
-    overflow-x: hidden;
-    color: #eaeaea;
-}
-.hero-center {
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    position: relative;
-    padding-left: 50px;
-    justify-content: center;
-}
-.circle-img {
-    position: absolute;
-    left: calc(50% - 180px);
-    top: 50%;
-    transform: translateY(-50%);
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: inset 0 0 60px #101417;
-    background: rgba(160,220,250,0.15);
-    z-index: 1;
-}
-.circle-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.94) contrast(1.05);
-}
-.hero-content {
-    position: relative;
-    z-index: 2;
-    width: 600px;
-    left: 120px;
-    text-align: left;
-}
-.hero-content h1 {
-    font-family: 'Anton', Arial, sans-serif;
-    font-weight: 900;
-    font-size: 100px;
-    letter-spacing: 4px;
-    margin: 0 0 10px 0;
-    line-height: 0.93;
-    color: #fff;
-    text-transform: uppercase;
-    text-shadow: 4px 4px 0 #1a2026;
-}
-.role {
-    font-family: 'Anton', Arial, sans-serif;
-    font-weight: 900;
-    font-size: 26px;
-    letter-spacing: 2px;
-    margin-bottom: 38px;
-    color: #82fff8;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 0 #1a2026;
-}
-.hero-content p {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-weight: 400;
-    font-size: 19px;
-    line-height: 1.8;
-    margin-bottom: 44px;
-    color: #b2bac6;
-}
-.cta {
-    padding: 16px 44px;
-    border-radius: 30px;
-    border: 2px solid #82fff8;
-    color: #82fff8;
-    font-weight: 700;
-    font-family: 'Montserrat', Arial, sans-serif;
-    text-decoration: none;
-    font-size: 21px;
-    background: transparent;
-    transition: 0.2s;
-}
-.cta:hover {
-    background: #82fff8;
-    color: #101417;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+    - primary meta tags
+  -->
+  <title>Neil Martinez - Data Analyst</title>
+  <meta name="title" content="Neil Martinez - Data Analyst">
+  <meta name="description" content="This is a personal portfolio">
+
+  <!--
+    - favicon
+  -->
+  <link href="./assets/images/favicon.png" rel="icon">
+  <link href="./assets/images/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.jpg">
+  <!--
+    - grid style for portfolio
+  -->
+
 </head>
+
 <body>
-<div class="hero-center">
-    <div class="circle-img">
-        <img src="photo.jpg" alt="Photo professionnelle">
+
+  <!--
+    - #PRELOADER
+  -->
+
+  <div class="preloader" data-preloader>
+    <div class="circle"></div>
+  </div>
+
+
+  <!--
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a>
+
+      </a>
+
+      <button class="nav-toggle-btn" data-nav-toggler data-nav-toggle-btn aria-label="Toggle menu">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+      </button>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="#about" class="navbar-link">About</a>
+          </li>     
+
+          <li>
+            <a href="#portfolio" class="navbar-link">Portfolio</a>
+          </li>
+
+          <li>
+            <a href="#blog" class="navbar-link">Blog</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="navbar-link">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
     </div>
-    <div class="hero-content">
-        <h1>Ton<br>Nom</h1>
-        <div class="role">DATA ANALYST</div>
-        <p>Voici une courte biographie ou présentation. Mets ici ton texte de présentation, tes compétences, objectifs, etc.</p>
-        <a href="cv.pdf" class="cta" download>Télécharger le CV</a>
-    </div>
-</div>
+  </header>
+
+  <main>
+    <article>
+
+      <!--
+        - #HERO
+      -->
+
+      <section class="section hero" aria-label="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h1 class="h1 hero-title">Neil Martinez</h1>
+            <p class="hero-subtitle">
+              Data Analyst
+            </p>
+            <div class="hero-banner">
+              <img src="./assets/images/hero-banner.jpg" width="800" height="800" alt="neil angelo martinez" class="w-100">
+            </div>
+
+            <p class="section-text">
+              Hi, I'm Neil Angelo Martinez, an aspiring data analyst with a strong desire to learn and grow, I am excited to bring my passion and dedication to the field. 
+              I am currently enrolled in Refocus, the top data analytics bootcamp in the Philippines, where I have gained a solid foundation in tools such as Excel, SQL, Power BI, and Python.
+              In addition to my formal education, I have also taken the initiative to continue learning and developing my skills through online courses and virtual internships. 
+              I am confident that my strong foundation and eagerness to learn will enable me to excel as a data analyst and make valuable contributions to any organization.
+            </p>
+
+            <a href="./assets/CV.pdf" target="_blank" class="btn has-before">
+              <span class="span">Download CV</span>
+
+              <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+        </div>
+      </section>
+    </article>
+  </main>
 </body>
 </html>
