@@ -1112,9 +1112,7 @@ visibility: hidden;
   color: #e4e4e4;
   font-weight: 400;
 }
-.experience-details li {
-  margin-bottom: 3px; /* ou la valeur de ton choix */
-}
+
 .image-grid img.hidden {
 display: none;
 }
