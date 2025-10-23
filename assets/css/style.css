@@ -1048,7 +1048,52 @@ visibility: hidden;
 .tabs {
     text-align: center;
 }
-
+.experiences-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 40px;
+}
+.experience-card {
+  display: flex;
+  align-items: flex-start;
+  background-color: rgba(40,41,47,0.88);
+  border-radius: 25px;
+  box-shadow: 0 4px 40px #000a 0.07;
+  overflow: hidden;
+  padding: 0;
+  gap: 30px;
+}
+.experience-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 20px 0 0 20px;
+  background: #999;
+  flex-shrink: 0;
+}
+.experience-details {
+  padding: 25px 35px 25px 0;
+}
+.experience-details h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.15em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.experience-details strong {
+  display: block;
+  font-size: 1.04em;
+  margin-bottom: 6px;
+  color: #fff;
+}
+.experience-details ul {
+  margin-top: 8px;
+  margin-bottom: 0;
+  padding-left: 23px;
+  color: #cacaca;
+}
 
 .image-grid img.hidden {
 display: none;
