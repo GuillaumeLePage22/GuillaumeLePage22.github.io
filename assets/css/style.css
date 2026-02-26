@@ -1127,3 +1127,14 @@ display: none;
   display: block;
   font-size: 1.1em;
 
+@media (max-width: 768px) {
+  .portfolio-row {
+    flex-direction: column !important;
+    gap: 30px !important;
+  }
+  .portfolio-left, .portfolio-right {
+    max-width: 100% !important;
+  }
+}
+
+
