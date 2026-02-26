@@ -111,21 +111,25 @@ const portfolioSections = document.querySelectorAll('.portfolio-section');
 
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
-    // 1. Activer l'onglet cliqué
+    console.log('Tab cliquée:', tab.getAttribute('data-category')); // DEBUG
+    
+    // 1. Activer l'onglet
     tabs.forEach(t => t.classList.remove('selected'));
     tab.classList.add('selected');
     
-    // 2. Récupérer la catégorie
+    // 2. Catégorie
     const category = tab.getAttribute('data-category');
     
-    // 3. Afficher/masquer les sections
+    // 3. Masquer TOUT
     portfolioSections.forEach(section => {
-      if (section.classList.contains(category)) {
-        section.style.display = 'block';
-      } else {
-        section.style.display = 'none';
-      }
+      section.style.display = 'none';
     });
+    
+    // 4. Afficher SEULEMENT la bonne
+    const targetSection = document.querySelector('.portfolio-section.' + category);
+    if (targetSection) {
+      targetSection.style.display = 'block';
+    }
   });
 });
 </script>
