@@ -146,27 +146,3 @@ const initSlider = function (currentSlider) {
 }
 
 for (let i = 0, len = sliders.length; i < len; i++) { initSlider(sliders[i]); }
-
-const portfolioTabs = document.querySelectorAll('.tab');
-const portfolioSectionsAll = document.querySelectorAll('.portfolio-section'); // ← nom différent
-
-portfolioTabs.forEach(tab => {
-  tab.addEventListener('click', function() {
-    const category = this.getAttribute('data-category');
-    
-    // Activer tab
-    portfolioTabs.forEach(t => t.classList.remove('selected'));
-    this.classList.add('selected');
-    
-    // Masquer toutes les sections
-    portfolioSectionsAll.forEach(section => {
-      section.style.display = 'none';
-    });
-    
-    // Afficher la bonne section
-    const targetSection = document.querySelector('.portfolio-section.' + category);
-    if (targetSection) {
-      targetSection.style.display = 'block';
-    }
-  });
-});
