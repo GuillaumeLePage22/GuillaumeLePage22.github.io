@@ -148,7 +148,7 @@ const initSlider = function (currentSlider) {
 for (let i = 0, len = sliders.length; i < len; i++) { initSlider(sliders[i]); }
 
 const portfolioTabs = document.querySelectorAll('.tab');
-const portfolioSections = document.querySelectorAll('.portfolio-section');
+const portfolioSectionsAll = document.querySelectorAll('.portfolio-section'); // ← nom différent
 
 portfolioTabs.forEach(tab => {
   tab.addEventListener('click', function() {
@@ -159,7 +159,7 @@ portfolioTabs.forEach(tab => {
     this.classList.add('selected');
     
     // Masquer toutes les sections
-    portfolioSections.forEach(section => {
+    portfolioSectionsAll.forEach(section => {
       section.style.display = 'none';
     });
     
