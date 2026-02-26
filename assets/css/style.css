@@ -472,14 +472,15 @@ body.nav-active { overflow: hidden; }
 }
 
 .hero-subtitle {
-  font-size: var(--fs-8) !important;           /* 1.2rem = petit mais majuscule */
+  font-size: 1.6rem !important;                /* ← PLUS GRAND */
   text-transform: uppercase !important;
   font-weight: var(--fw-700) !important;
   color: var(--white) !important;
-  letter-spacing: 2px !important;
-  line-height: 1.9em !important;
+  letter-spacing: 3px !important;              /* ← Espacement lettres */
+  line-height: 1.2em !important;               /* ← Serré pour majuscules */
   margin-block: 10px 30px !important;
 }
+
 
 .hero-banner {
   border-radius: var(--blob-radius);
