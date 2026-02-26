@@ -464,7 +464,8 @@ body.nav-active { overflow: hidden; }
   #HERO
 \*-----------------------------------*/
 
-.hero { padding-block-start: 130px; }
+.hero { padding-block-start: 130px;
+       padding-top: 100px; }
 
 .hero-title {
   text-transform: uppercase;
