@@ -513,7 +513,7 @@ body.nav-active { overflow: hidden; }
 }
 
 .hero-content .section-text {
-  color: #ffffff !important;
+  color: yellow !important;
   font-size: 1.8rem !important;
   line-height: 1.9 !important;
   margin-block: 30px 20px !important;
