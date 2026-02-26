@@ -477,7 +477,7 @@ body.nav-active { overflow: hidden; }
   font-weight: var(--fw-700);
   color: var(--white);
   letter-spacing: 2px;
-  line-height: 1.6em;
+  line-height: 1.7em;
   margin-block: 10px 30px;
 }
 
