@@ -464,7 +464,7 @@ body.nav-active { overflow: hidden; }
   #HERO
 \*-----------------------------------*/
 
-.hero { padding-block-start: 400px; }
+.hero { padding-block-start: 320px; }
 
 .hero-title {
   text-transform: uppercase;
@@ -514,8 +514,8 @@ body.nav-active { overflow: hidden; }
 
 .hero-content .section-text {
   color: #ffffff !important;
-  font-size: 1.4rem !important;
-  line-height: 1.6 !important;
+  font-size: 1.6rem !important;
+  line-height: 1.7 !important;
   margin-block: 30px 20px !important;
 }
 
