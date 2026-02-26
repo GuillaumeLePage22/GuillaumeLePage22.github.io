@@ -146,60 +146,71 @@ esprit analytique et mon exigence au service de la réussite collective.
     <div class="tabs">
       <div class="tab selected" data-category="category1">Power BI</div>
       <div class="tab" data-category="category2">Python</div>
-      <div class="tab" data-category="category3">SQL</div>
-      <div class="tab" data-category="category4">Excel</div>
     </div>
     
-    <!-- ✅ POWER BI : 2 IFRAMES VERTICAUX + TEXTE DROIT -->
+    <!-- ✅ POWER BI : 2 paires IFRAME + TEXTE -->
     <div class="portfolio-section category1" style="display: block;">
-      <div style="display: flex; gap: 40px; align-items: start; margin-bottom: 40px;">
-        <!-- GAUCHE : PowerBI VERTICAUX -->
+      
+      <!-- PAIRES 1 : Députés + son texte -->
+      <div style="display: flex; gap: 40px; align-items: start; margin-bottom: 60px;">
+        <!-- IFRAME Députés -->
         <div style="flex: 1;">
-          <h3 style="margin-bottom: 20px;">Analyse des Députés</h3>
+          <h3>Analyse des Députés</h3>
           <iframe title="Député" width="100%" height="400" 
                   src="https://app.powerbi.com/view?r=eyJrIjoiNTU0MjdjNDgtYjljNS00MDNlLTllNmUtNjI4NjllZjVhMTU1IiwidCI6IjE4M2Y3NjQwLTBlZDItNGI4ZC1iMmU5LTQ2YTBhNmY3ZjhkNiJ9" 
                   frameborder="0" allowFullScreen="true" style="border-radius: 12px;"></iframe>
-          
-          <h3 style="margin: 40px 0 20px 0;">Analyse du Chômage</h3>
+        </div>
+        
+        <!-- TEXTE SPÉCIFIQUE Députés -->
+        <div style="flex: 1; padding: 20px;">
+          <h3>Présentation</h3>
+          <p style="font-size: 1.2rem; line-height: 1.6; color: #e0e0e0;">
+            Dashboard interactif analysant les députés français : votes, présences, thématiques. 
+            Visualisations DAX pour explorer les tendances parlementaires en temps réel.
+          </p>
+        </div>
+      </div>
+      
+      <!-- PAIRES 2 : Chômage + son texte -->
+      <div style="display: flex; gap: 40px; align-items: start;">
+        <!-- IFRAME Chômage -->
+        <div style="flex: 1;">
+          <h3>Analyse du Chômage</h3>
           <iframe title="Chomage" width="100%" height="400" 
                   src="https://app.powerbi.com/view?r=eyJrIjoiYWViYzY1ODYtZjJlZC00YWNlLThkZmItZDMyOGQ4MzUwMzUwIiwidCI6IjE4M2Y3NjQwLTBlZDItNGI4ZC1iMmU5LTQ2YTBhNmY3ZjhkNiJ9" 
                   frameborder="0" allowFullScreen="true" style="border-radius: 12px;"></iframe>
         </div>
         
-        <!-- DROITE : TEXTE EXPLICATIF PowerBI -->
+        <!-- TEXTE SPÉCIFIQUE Chômage -->
         <div style="flex: 1; padding: 20px;">
-          <h3>Mes projets Power BI</h3>
-          <p style="font-size: 1.2rem; line-height: 1.6; color: #e0e0e0; margin-bottom: 20px;">
-            J'ai développé des dashboards interactifs pour analyser les données parlementaires françaises et le chômage. 
-            Ces visualisations permettent d'explorer les votes, présences et tendances socio-économiques en temps réel.
+          <h3>Présentation</h3>
+          <p style="font-size: 1.2rem; line-height: 1.6; color: #e0e0e0;">
+            [ÉCRIS TON TEXTE CHÔMAGE ICI]<br>
+            Analyse des tendances du chômage en France avec indicateurs régionaux et temporels.
           </p>
-          <ul style="color: #ccc; font-size: 1.1rem;">
-            <li>• Extraction et nettoyage de données</li>
-            <li>• Visualisations DAX avancées</li>
-            <li>• Dashboards responsives</li>
-          </ul>
         </div>
       </div>
+      
     </div>
     
-    <!-- ✅ PYTHON : Son propre contenu -->
+    <!-- ✅ PYTHON : Sa propre paire -->
     <div class="portfolio-section category2" style="display: none;">
       <div style="display: flex; gap: 40px; align-items: start;">
-        <!-- GAUCHE : Projet Python -->
+        <!-- Image Python -->
         <div style="flex: 1;">
           <img src="./assets/images/croix-blanche.jpg" alt="Analyse films" style="width: 100%; height: 400px; object-fit: cover; border-radius: 12px;">
         </div>
         
-        <!-- DROITE : TEXTE EXPLICATIF Python -->
+        <!-- Texte Python -->
         <div style="flex: 1; padding: 20px;">
-          <h3>Analyse Films - Ratio Entrées/Budget</h3>
-          <p style="font-size: 1.2rem; line-height: 1.6; color: #e0e0e0; margin-bottom: 20px;">
+          <h3>Analyse Films Python</h3>
+          <p style="font-size: 1.2rem; line-height: 1.6; color: #e0e0e0;">
             [ÉCRIS TON TEXTE PYTHON ICI]<br>
-            Analyse des données du cinéma français avec Python, pandas et visualisation des ratios entrées/budget.
+            Web scraping, pandas, visualisation ratio entrées/budget cinéma français.
           </p>
           <div style="margin-top: 20px;">
-            <a href="./assets/Python/Untitled.html" target="_blank" style="background: #fff; color: #000; padding: 12px 24px; border-radius: 8px; margin-right: 10px; display: inline-block;">Voir l'analyse</a>
-            <a href="https://github.com/GuillaumeLePage22/GuillaumeLePage22.github.io/blob/main/assets/Python/Untitled.ipynb" target="_blank" style="background: #333; color: #fff; padding: 12px 24px; border-radius: 8px; display: inline-block;">Code source</a>
+            <a href="./assets/Python/Untitled.html" target="_blank" style="background: #fff; color: #000; padding: 12px 24px; border-radius: 8px; margin-right: 10px;">Démo</a>
+            <a href="https://github.com/GuillaumeLePage22/GuillaumeLePage22.github.io/blob/main/assets/Python/Untitled.ipynb" target="_blank" style="background: #333; color: #fff; padding: 12px 24px; border-radius: 8px;">Code</a>
           </div>
         </div>
       </div>
