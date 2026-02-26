@@ -146,3 +146,27 @@ const initSlider = function (currentSlider) {
 }
 
 for (let i = 0, len = sliders.length; i < len; i++) { initSlider(sliders[i]); }
+
+const portfolioTabs = document.querySelectorAll('.tab');
+const portfolioSections = document.querySelectorAll('.portfolio-section');
+
+portfolioTabs.forEach(tab => {
+  tab.addEventListener('click', function() {
+    const category = this.getAttribute('data-category');
+    
+    // Activer tab
+    portfolioTabs.forEach(t => t.classList.remove('selected'));
+    this.classList.add('selected');
+    
+    // Masquer toutes les sections
+    portfolioSections.forEach(section => {
+      section.style.display = 'none';
+    });
+    
+    // Afficher la bonne section
+    const targetSection = document.querySelector('.portfolio-section.' + category);
+    if (targetSection) {
+      targetSection.style.display = 'block';
+    }
+  });
+});
