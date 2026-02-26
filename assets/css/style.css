@@ -1053,6 +1053,7 @@ visibility: hidden;
 
 .tabs {
     text-align: center;
+  margin-bottom: 40px;
 }
 .experiences-list {
   display: flex;
