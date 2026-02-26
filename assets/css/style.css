@@ -512,8 +512,12 @@ body.nav-active { overflow: hidden; }
 
 }
 
-.hero .section-text { margin-block: 30px;
-                    color: var(--white)!important;}
+.hero-content .section-text {
+  color: #ffffff !important;
+  font-size: 1.4rem !important;
+  line-height: 1.6 !important;
+  margin-block: 30px 20px !important;
+}
 
 .hero .btn { margin-inline: auto; }
 
