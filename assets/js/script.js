@@ -1,18 +1,23 @@
-<script>
 'use strict';
+
+
 
 /**
  * add event listener on multiple elements
  */
+
 const addEventOnElements = function (elements, eventType, callback) {
   for (let i = 0, len = elements.length; i < len; i++) {
     elements[i].addEventListener(eventType, callback);
   }
 }
 
+
+
 /**
  * PRELOADER
  */
+
 const preloader = document.querySelector("[data-preloader]");
 
 window.addEventListener("DOMContentLoaded", function () {
@@ -20,9 +25,13 @@ window.addEventListener("DOMContentLoaded", function () {
   document.body.classList.add("loaded");
 });
 
+
+
 /**
- * NAVBAR - HEADER - SLIDER (ton code existant)
+ * NAVBAR
+ * navbar toggle for mobile
  */
+
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
 const navbar = document.querySelector("[data-navbar]");
@@ -37,7 +46,15 @@ const toggleNavbar = function () {
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
 
+
+
+/**
+ * HEADER
+ * header active when window scroll down to 100px
+ */
+
 const header = document.querySelector("[data-header]");
+
 window.addEventListener("scroll", function () {
   if (window.scrollY >= 100) {
     header.classList.add("active");
@@ -46,41 +63,58 @@ window.addEventListener("scroll", function () {
   }
 });
 
+
+/**
+ * SLIDER
+ */
+
 const sliders = document.querySelectorAll("[data-slider]");
+
 const initSlider = function (currentSlider) {
-  // ... ton code slider existant (je le garde intact)
+
   const sliderContainer = currentSlider.querySelector("[data-slider-container]");
   const sliderPrevBtn = currentSlider.querySelector("[data-slider-prev]");
   const sliderNextBtn = currentSlider.querySelector("[data-slider-next]");
 
   let totalSliderVisibleItems = Number(getComputedStyle(currentSlider).getPropertyValue("--slider-items"));
   let totalSlidableItems = sliderContainer.childElementCount - totalSliderVisibleItems;
+
   let currentSlidePos = 0;
 
   const moveSliderItem = function () {
     sliderContainer.style.transform = `translateX(-${sliderContainer.children[currentSlidePos].offsetLeft}px)`;
   }
 
+  /**
+   * NEXT SLIDE
+   */
   const slideNext = function () {
     const slideEnd = currentSlidePos >= totalSlidableItems;
+
     if (slideEnd) {
       currentSlidePos = 0;
     } else {
       currentSlidePos++;
     }
+
     moveSliderItem();
   }
 
+  sliderNextBtn.addEventListener("click", slideNext);
+
+  /**
+   * PREVIOUS SLIDE
+   */
   const slidePrev = function () {
     if (currentSlidePos <= 0) {
       currentSlidePos = totalSlidableItems;
     } else {
       currentSlidePos--;
     }
+
     moveSliderItem();
   }
 
-  sliderNextBtn.addEventListener("click", slideNext);
   sliderPrevBtn.addEventListener("click", slidePrev);
 
   const dontHaveExtraItem = totalSlidableItems <= 0;
@@ -89,47 +123,26 @@ const initSlider = function (currentSlider) {
     sliderPrevBtn.style.display = 'none';
   }
 
+  /**
+   * slide with [shift + mouse wheel]
+   */
+
   currentSlider.addEventListener("wheel", function (event) {
     if (event.shiftKey && event.deltaY > 0) slideNext();
     if (event.shiftKey && event.deltaY < 0) slidePrev();
   });
 
+  /**
+   * RESPONSIVE
+   */
+
   window.addEventListener("resize", function () {
     totalSliderVisibleItems = Number(getComputedStyle(currentSlider).getPropertyValue("--slider-items"));
     totalSlidableItems = sliderContainer.childElementCount - totalSliderVisibleItems;
+
     moveSliderItem();
   });
+
 }
 
 for (let i = 0, len = sliders.length; i < len; i++) { initSlider(sliders[i]); }
-
-/**
- * ✅ NOUVEAU : Gestion des onglets Portfolio
- */
-const tabs = document.querySelectorAll('.tab');
-const portfolioSections = document.querySelectorAll('.portfolio-section');
-
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    console.log('Tab cliquée:', tab.getAttribute('data-category')); // DEBUG
-    
-    // 1. Activer l'onglet
-    tabs.forEach(t => t.classList.remove('selected'));
-    tab.classList.add('selected');
-    
-    // 2. Catégorie
-    const category = tab.getAttribute('data-category');
-    
-    // 3. Masquer TOUT
-    portfolioSections.forEach(section => {
-      section.style.display = 'none';
-    });
-    
-    // 4. Afficher SEULEMENT la bonne
-    const targetSection = document.querySelector('.portfolio-section.' + category);
-    if (targetSection) {
-      targetSection.style.display = 'block';
-    }
-  });
-});
-</script>
