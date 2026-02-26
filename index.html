@@ -325,6 +325,40 @@ esprit analytique et mon exigence au service de la réussite collective.
             
     </article>
   </main>
+    <script>
+  // Gestion des onglets
+  const tabs = document.querySelectorAll('.tab');
+  const cards = document.querySelectorAll('.portofolio-card');
   
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Retirer la classe selected de tous les onglets
+      tabs.forEach(t => t.classList.remove('selected'));
+      // Ajouter la classe selected à l'onglet cliqué
+      tab.classList.add('selected');
+      
+      // Récupérer la catégorie
+      const category = tab.getAttribute('data-category');
+      
+      // Afficher/masquer les cartes
+      cards.forEach(card => {
+        if (card.classList.contains(category)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+  
+  // Afficher uniquement la première catégorie au chargement
+  document.addEventListener('DOMContentLoaded', () => {
+    cards.forEach(card => {
+      if (!card.classList.contains('category1')) {
+        card.style.display = 'none';
+      }
+    });
+  });
+</script>
 </body>
 </html>
