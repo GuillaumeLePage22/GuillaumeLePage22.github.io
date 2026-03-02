@@ -1121,24 +1121,17 @@ visibility: hidden;
 }
 
 .image-grid img.hidden {
-display: none;
+  display: none;
 }
+
 .experience-details strong {
   margin-bottom: 3px;
   display: block;
   font-size: 1.1em;
+}                          /* ← accolade ajoutée */
 
-@media (max-width: 768px) {
-  .portfolio-row {
-    flex-direction: column !important;
-    gap: 30px !important;
-  }
-  .portfolio-left, .portfolio-right {
-    max-width: 100% !important;
-  }
-
-  /* ========================================
-   POLICE PLUS GRANDE POUR PORTFOLIO
+/* ========================================
+   DESCRIPTIONS PORTFOLIO
 ======================================== */
 
 .looker-description,
@@ -1166,4 +1159,12 @@ display: none;
   margin-bottom: 8px !important;
 }
 
-
+@media (max-width: 768px) {
+  .portfolio-row {
+    flex-direction: column !important;
+    gap: 30px !important;
+  }
+  .portfolio-left, .portfolio-right {
+    max-width: 100% !important;
+  }
+}        
