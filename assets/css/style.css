@@ -1137,7 +1137,7 @@ visibility: hidden;
 .looker-description,
 .looker-description p {
   font-size: 1.4rem !important;
-  line-height: 1.4 !important;
+  line-height: 1.2 !important;
   color: #e0e0e0 !important;
   margin-bottom: 18px !important;
 }
@@ -1155,7 +1155,7 @@ visibility: hidden;
 
 .looker-description ul li {
   font-size: 1.4rem !important;
-  line-height: 1.5 !important;
+  line-height: 1.2 !important;
   margin-bottom: 8px !important;
 }
 
