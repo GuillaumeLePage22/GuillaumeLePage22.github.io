@@ -232,48 +232,53 @@ esprit analytique et mon exigence au service de la réussite collective.
     </div>
 
     <!-- Texte droite -->
-    <div style="flex: 1; padding: 20px; display: flex; flex-direction: column; justify-content: center;">
-      <h3>Analyse des casteurs de la chaîne Twitch OTP</h3>
-      <p style="font-size: 1.2rem; line-height: 1.6; color: #e0e0e0;">
-        <br>
-        Objectif
-Création d’un dashboard interactif pour analyser l’activité des casteurs de la chaîne Twitch OTP, spécialisée dans la diffusion de compétitions de League of Legends.
-​
+    <div style="flex: 1; padding: 20px; display: flex; flex-direction: column; justify-content: flex-start;">
+  <h3 style="margin: 0 0 20px 0; color: #fff;">Analyse des casteurs de la chaîne Twitch OTP</h3>
+  
+  <div style="font-size: 1.1rem; line-height: 1.7; color: #e0e0e0;">
+    
+    <h4 style="color: #4CAF50; margin: 0 0 15px 0;">🎯 Objectif</h4>
+    <p style="margin: 0 0 25px 0;">
+      Création d'un <strong>dashboard interactif</strong> sur Looker Studio pour analyser l'activité des casteurs de la chaîne Twitch <strong>OTP</strong>, spécialisée dans les compétitions League of Legends.
+    </p>
 
-Le tableau de bord permet de suivre notamment :
+    <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">📊 Visualisations principales</h4>
+    <ul style="margin: 0 0 30px 20px; padding: 0;">
+      <li>Équipes commentées par chaque casteur</li>
+      <li>Pauses/interruptions pendant les matchs</li>
+      <li>Duos de casteurs les plus fréquents</li>
+      <li>Position des casteurs (main desk, analyste...)</li>
+      <li>Nombre total de matchs commentés</li>
+      <li>Jours de diffusion de chaque casteur</li>
+    </ul>
 
-- Les équipes commentées par chaque casteur
-
-- La présence de pauses ou interruptions durant les matchs
-
-- Les duos de casteurs 
-
-- La position de chaque casteur à l’écran (main desk, analyste, etc.)
-
-- Le nombre de matchs commentés
-
-- Les jours de diffusion de chaque casteur
-
-Données et méthodologie
-Récupération automatique des informations de matchs via un script de web scraping sur le site gol.gg, une référence pour les statistiques de matchs professionnels de League of Legends.
-
-Visionnage systématique des matchs diffusés sur OTP afin d’identifier les casteurs présents, leur position à l’écran et les éventuelles pauses au cours des parties.
-
-Compétences mises en avant (à adapter selon tes outils)
-Web scraping (Python, requests, BeautifulSoup, etc.)
-
-Nettoyage et structuration des données (pandas / SQL)
-
-Création de dashboard avec LookerStudio
-      </p>
-      <div style="margin-top: 20px;">
-        <a href="https://lookerstudio.google.com/reporting/ff482874-5c95-4a44-bdd7-4ef61be03782" 
-           target="_blank" 
-           style="background: #fff; color: #000; padding: 12px 24px; border-radius: 8px;">
-          Voir le rapport →
-        </a>
-      </div>
+    <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">🛠️ Méthodologie</h4>
+    <div style="margin: 0 0 25px 0;">
+      <p><strong>1. Web scraping</strong> sur gol.gg pour les données matchs</p>
+      <p><strong>2. Analyse manuelle</strong> des VODs OTP (casteurs, positions, pauses)</p>
+      <p><strong>3. Structuration</strong> pour Looker Studio</p>
     </div>
+
+    <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">💻 Stack technique</h4>
+    <ul style="margin: 0 0 30px 20px; padding: 0;">
+      <li><strong>Web scraping</strong> : Python + BeautifulSoup</li>
+      <li><strong>Data processing</strong> : Pandas/SQL</li>
+      <li><strong>Dashboard</strong> : <strong>Looker Studio</strong></li>
+    </ul>
+
+  </div>
+
+  <div style="margin-top: 30px;">
+    <a href="https://lookerstudio.google.com/reporting/ff482874-5c95-4a44-bdd7-4ef61be03782" 
+       target="_blank" 
+       style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+              color: white; padding: 14px 28px; border-radius: 50px; 
+              text-decoration: none; font-weight: 600; 
+              box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+      👀 Voir le dashboard Looker Studio
+    </a>
+  </div>
+</div>
 
   </div>
 </div>
