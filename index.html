@@ -526,12 +526,8 @@ esprit analytique et mon exigence au service de la réussite collective.
     tabs.forEach(function(tab) {
       tab.addEventListener('click', function() {
         const category = this.getAttribute('data-category');
-
-        // Activer le bon onglet
         tabs.forEach(function(t) { t.classList.remove('selected'); });
         this.classList.add('selected');
-
-        // Afficher la bonne section
         sections.forEach(function(section) {
           if (section.classList.contains(category)) {
             section.style.display = 'block';
@@ -541,7 +537,13 @@ esprit analytique et mon exigence au service de la réussite collective.
         });
       });
     });
-  });
+
+    // Boutons carrousel ← AJOUT ICI
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+    if (prevBtn) prevBtn.addEventListener('click', function() { moveCarousel(-1); });
+    if (nextBtn) nextBtn.addEventListener('click', function() { moveCarousel(1); });
+});
 </script>
 </body>
 </html>
