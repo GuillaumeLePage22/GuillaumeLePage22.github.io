@@ -33,13 +33,16 @@ window.addEventListener("DOMContentLoaded", function () {
  */
 
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
-const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
+const navToggleBtn = document.querySelector(".nav-toggle-btn");  ← comme ça
 const navbar = document.querySelector("[data-navbar]");
 const overlay = document.querySelector("[data-overlay]");
 
 const toggleNavbar = function () {
   navbar.classList.toggle("active");
-  navToggleBtn.classList
+  navToggleBtn.classList.toggle("active");
+  overlay.classList.toggle("active");
+  document.body.classList.toggle("nav-active");
+}
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
 
