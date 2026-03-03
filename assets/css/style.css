@@ -1170,4 +1170,15 @@ visibility: hidden;
   .portfolio-left, .portfolio-right {
     max-width: 100% !important;
   }
-}        
+}   
+
+.portfolio-project-title {
+  text-align: center !important;
+  color: #fff !important;
+  font-size: 3rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 30px !important;
+  padding-top: 40px !important;
+  border-top: 1px solid rgba(255,255,255,0.15) !important;
+}
+
