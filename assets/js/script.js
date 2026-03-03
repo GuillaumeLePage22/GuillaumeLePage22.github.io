@@ -146,3 +146,14 @@ const initSlider = function (currentSlider) {
 }
 
 for (let i = 0, len = sliders.length; i < len; i++) { initSlider(sliders[i]); }
+
+// Carrousel LCM
+let carouselIndex = 0;
+function moveCarousel(direction) {
+  const slides = document.querySelectorAll('#carousel-lcm .carousel-slide');
+  slides[carouselIndex].style.display = 'none';
+  carouselIndex = (carouselIndex + direction + slides.length) % slides.length;
+  slides[carouselIndex].style.display = 'block';
+  document.getElementById('carousel-indicator').textContent = (carouselIndex + 1) + ' / ' + slides.length;
+}
+
