@@ -520,6 +520,8 @@ esprit analytique et mon exigence au service de la réussite collective.
   </main>
    <script>
   document.addEventListener('DOMContentLoaded', function() {
+
+    // TABS
     const tabs = document.querySelectorAll('.tab');
     const sections = document.querySelectorAll('.portfolio-section');
 
@@ -538,12 +540,27 @@ esprit analytique et mon exigence au service de la réussite collective.
       });
     });
 
-    // Boutons carrousel ← AJOUT ICI
-    const prevBtn = document.getElementById('carousel-prev');
-    const nextBtn = document.getElementById('carousel-next');
-    if (prevBtn) prevBtn.addEventListener('click', function() { moveCarousel(-1); });
-    if (nextBtn) nextBtn.addEventListener('click', function() { moveCarousel(1); });
-});
+    // CARROUSEL
+    let carouselIndex = 0;
+
+    document.getElementById('carousel-prev').addEventListener('click', function() {
+      const slides = document.querySelectorAll('#carousel-lcm .carousel-slide');
+      slides[carouselIndex].style.display = 'none';
+      carouselIndex = (carouselIndex - 1 + slides.length) % slides.length;
+      slides[carouselIndex].style.display = 'block';
+      document.getElementById('carousel-indicator').textContent = (carouselIndex + 1) + ' / ' + slides.length;
+    });
+
+    document.getElementById('carousel-next').addEventListener('click', function() {
+      const slides = document.querySelectorAll('#carousel-lcm .carousel-slide');
+      slides[carouselIndex].style.display = 'none';
+      carouselIndex = (carouselIndex + 1) % slides.length;
+      slides[carouselIndex].style.display = 'block';
+      document.getElementById('carousel-indicator').textContent = (carouselIndex + 1) + ' / ' + slides.length;
+    });
+
+  });
 </script>
+
 </body>
 </html>
