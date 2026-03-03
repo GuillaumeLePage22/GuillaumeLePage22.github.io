@@ -150,12 +150,15 @@ for (let i = 0, len = sliders.length; i < len; i++) { initSlider(sliders[i]); }
 // Carrousel LCM
 // Carrousel LCM
 let carouselIndex = 0;
-window.moveCarousel = function(direction) {
+
+function moveCarousel(direction) {
   const slides = document.querySelectorAll('#carousel-lcm .carousel-slide');
+  if (slides.length === 0) return;
   slides[carouselIndex].style.display = 'none';
   carouselIndex = (carouselIndex + direction + slides.length) % slides.length;
   slides[carouselIndex].style.display = 'block';
-  document.getElementById('carousel-indicator').textContent = (carouselIndex + 1) + ' / ' + slides.length;
+  const indicator = document.getElementById('carousel-indicator');
+  if (indicator) indicator.textContent = (carouselIndex + 1) + ' / ' + slides.length;
 }
 
 
