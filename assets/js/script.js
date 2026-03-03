@@ -162,6 +162,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// DEBUG - Vérifie que les éléments existent
+console.log("navTogglers:", navTogglers.length);
+console.log("navToggleBtn:", navToggleBtn);
+console.log("navbar:", navbar);
+console.log("overlay:", overlay);
+
+// Force le listener sur le bouton
+document.addEventListener("DOMContentLoaded", function() {
+  const btn = document.querySelector(".nav-toggle-btn");
+  const nav = document.querySelector("[data-navbar]");
+  const overlay = document.querySelector("[data-overlay]");
+  const body = document.body;
+  
+  btn.addEventListener("click", function() {
+    console.log("CLICK détecté !");
+    nav.classList.toggle("active");
+    btn.classList.toggle("active");
+    overlay.classList.toggle("active");
+    body.classList.toggle("nav-active");
+  });
+});
 
 
 
