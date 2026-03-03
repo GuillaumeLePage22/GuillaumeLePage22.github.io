@@ -148,10 +148,9 @@ const initSlider = function (currentSlider) {
 for (let i = 0, len = sliders.length; i < len; i++) { initSlider(sliders[i]); }
 
 // Carrousel LCM
-// Carrousel LCM
 let carouselIndex = 0;
 
-function moveCarousel(direction) {
+window.moveCarousel = function(direction) {
   const slides = document.querySelectorAll('#carousel-lcm .carousel-slide');
   if (slides.length === 0) return;
   slides[carouselIndex].style.display = 'none';
@@ -160,5 +159,6 @@ function moveCarousel(direction) {
   const indicator = document.getElementById('carousel-indicator');
   if (indicator) indicator.textContent = (carouselIndex + 1) + ' / ' + slides.length;
 }
+
 
 
