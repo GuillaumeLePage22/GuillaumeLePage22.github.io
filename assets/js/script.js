@@ -39,10 +39,7 @@ const overlay = document.querySelector("[data-overlay]");
 
 const toggleNavbar = function () {
   navbar.classList.toggle("active");
-  navToggleBtn.classList.toggle("active");
-  overlay.classList.toggle("active");
-  document.body.classList.toggle("nav-active");
-}
+  navToggleBtn.classList
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
 
@@ -148,6 +145,20 @@ const initSlider = function (currentSlider) {
 for (let i = 0, len = sliders.length; i < len; i++) { initSlider(sliders[i]); }
 
 // Carrousel LCM
+// Smooth scroll pour les liens navbar
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
 
 
 
