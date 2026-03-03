@@ -42,6 +42,38 @@
 
 </head>
 
+<!-- MODALE CARROUSEL -->
+<div id="carousel-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+  background:rgba(0,0,0,0.85); z-index:9999; justify-content:center; align-items:center;">
+  
+  <div style="position:relative; width:80%; max-width:1100px;">
+    
+    <!-- Image agrandie -->
+    <img id="modal-img" src="" style="width:100%; max-height:80vh; object-fit:contain; border-radius:12px;">
+    
+    <!-- Flèche gauche -->
+    <button id="modal-prev" style="position:absolute; top:50%; left:-50px; transform:translateY(-50%);
+      background:rgba(255,255,255,0.2); color:#fff; border:none; border-radius:50%;
+      width:45px; height:45px; font-size:1.5rem; cursor:pointer;">‹</button>
+    
+    <!-- Flèche droite -->
+    <button id="modal-next" style="position:absolute; top:50%; right:-50px; transform:translateY(-50%);
+      background:rgba(255,255,255,0.2); color:#fff; border:none; border-radius:50%;
+      width:45px; height:45px; font-size:1.5rem; cursor:pointer;">›</button>
+
+    <!-- Fermer -->
+    <button id="modal-close" style="position:absolute; top:-40px; right:0;
+      background:transparent; color:#fff; border:none; font-size:1.8rem; cursor:pointer;">✕</button>
+
+    <!-- Indicateur -->
+    <div style="text-align:center; margin-top:10px; color:#aaa; font-size:0.9rem;">
+      <span id="modal-indicator">1 / 8</span>
+    </div>
+
+  </div>
+</div>
+
+  
 <body>
 
   <!--
@@ -524,43 +556,87 @@ esprit analytique et mon exigence au service de la réussite collective.
     // TABS
     const tabs = document.querySelectorAll('.tab');
     const sections = document.querySelectorAll('.portfolio-section');
-
     tabs.forEach(function(tab) {
       tab.addEventListener('click', function() {
         const category = this.getAttribute('data-category');
         tabs.forEach(function(t) { t.classList.remove('selected'); });
         this.classList.add('selected');
         sections.forEach(function(section) {
-          if (section.classList.contains(category)) {
-            section.style.display = 'block';
-          } else {
-            section.style.display = 'none';
-          }
+          section.style.display = section.classList.contains(category) ? 'block' : 'none';
         });
       });
     });
 
     // CARROUSEL
     let carouselIndex = 0;
+    const getSlides = () => document.querySelectorAll('#carousel-lcm .carousel-slide');
+    const getSrcs = () => Array.from(getSlides()).map(img => img.src);
+
+    function updateCarousel(index) {
+      const slides = getSlides();
+      slides.forEach(s => s.style.display = 'none');
+      slides[index].style.display = 'block';
+      document.getElementById('carousel-indicator').textContent = (index + 1) + ' / ' + slides.length;
+    }
 
     document.getElementById('carousel-prev').addEventListener('click', function() {
-      const slides = document.querySelectorAll('#carousel-lcm .carousel-slide');
-      slides[carouselIndex].style.display = 'none';
-      carouselIndex = (carouselIndex - 1 + slides.length) % slides.length;
-      slides[carouselIndex].style.display = 'block';
-      document.getElementById('carousel-indicator').textContent = (carouselIndex + 1) + ' / ' + slides.length;
+      carouselIndex = (carouselIndex - 1 + getSlides().length) % getSlides().length;
+      updateCarousel(carouselIndex);
     });
 
     document.getElementById('carousel-next').addEventListener('click', function() {
-      const slides = document.querySelectorAll('#carousel-lcm .carousel-slide');
-      slides[carouselIndex].style.display = 'none';
-      carouselIndex = (carouselIndex + 1) % slides.length;
-      slides[carouselIndex].style.display = 'block';
-      document.getElementById('carousel-indicator').textContent = (carouselIndex + 1) + ' / ' + slides.length;
+      carouselIndex = (carouselIndex + 1) % getSlides().length;
+      updateCarousel(carouselIndex);
+    });
+
+    // MODALE
+    let modalIndex = 0;
+    const modal = document.getElementById('carousel-modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalIndicator = document.getElementById('modal-indicator');
+
+    function openModal(index) {
+      modalIndex = index;
+      const srcs = getSrcs();
+      modal.style.display = 'flex';
+      modalImg.src = srcs[modalIndex];
+      modalIndicator.textContent = (modalIndex + 1) + ' / ' + srcs.length;
+    }
+
+    function updateModal(index) {
+      const srcs = getSrcs();
+      modalIndex = (index + srcs.length) % srcs.length;
+      modalImg.src = srcs[modalIndex];
+      modalIndicator.textContent = (modalIndex + 1) + ' / ' + srcs.length;
+    }
+
+    // Clic sur image du carrousel → ouvre modale
+    getSlides().forEach(function(slide, i) {
+      slide.style.cursor = 'zoom-in';
+      slide.addEventListener('click', function() { openModal(i); });
+    });
+
+    document.getElementById('modal-prev').addEventListener('click', function() { updateModal(modalIndex - 1); });
+    document.getElementById('modal-next').addEventListener('click', function() { updateModal(modalIndex + 1); });
+    document.getElementById('modal-close').addEventListener('click', function() { modal.style.display = 'none'; });
+
+    // Fermer en cliquant sur le fond
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) modal.style.display = 'none';
+    });
+
+    // Navigation clavier
+    document.addEventListener('keydown', function(e) {
+      if (modal.style.display === 'flex') {
+        if (e.key === 'ArrowRight') updateModal(modalIndex + 1);
+        if (e.key === 'ArrowLeft') updateModal(modalIndex - 1);
+        if (e.key === 'Escape') modal.style.display = 'none';
+      }
     });
 
   });
 </script>
+
 
 </body>
 </html>
