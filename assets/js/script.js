@@ -32,20 +32,32 @@ window.addEventListener("DOMContentLoaded", function () {
  * navbar toggle for mobile
  */
 
-const navTogglers = document.querySelectorAll("[data-nav-toggler]");
-const navToggleBtn = document.querySelector(".nav-toggle-btn");  ← comme ça
-const navbar = document.querySelector("[data-navbar]");
-const overlay = document.querySelector("[data-overlay]");
+document.addEventListener("DOMContentLoaded", function() {
+  const navTogglers = document.querySelectorAll("[data-nav-toggler]");
+  const navbar = document.querySelector("[data-navbar]");
+  const overlay = document.querySelector("[data-overlay]");
+  const navToggleBtn = document.querySelector(".nav-toggle-btn");
+  const body = document.body;
 
-const toggleNavbar = function () {
-  navbar.classList.toggle("active");
-  navToggleBtn.classList.toggle("active");
-  overlay.classList.toggle("active");
-  document.body.classList.toggle("nav-active");
-}
+  console.log("DEBUG - Éléments trouvés:", {
+    navTogglers: navTogglers.length,
+    navbar: !!navbar,
+    overlay: !!overlay,
+    navToggleBtn: !!navToggleBtn
+  });
 
-addEventOnElements(navTogglers, "click", toggleNavbar);
+  const toggleNavbar = function () {
+    console.log("toggleNavbar appelée !");
+    navbar.classList.toggle("active");
+    navToggleBtn.classList.toggle("active");
+    overlay.classList.toggle("active");
+    body.classList.toggle("nav-active");
+  }
 
+  navTogglers.forEach(toggler => {
+    toggler.addEventListener("click", toggleNavbar);
+  });
+});
 
 
 /**
