@@ -5,625 +5,494 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!--
-    - primary meta tags
-  -->
   <title>G. Le Page - Data Analyst/PMO</title>
   <meta name="title" content="G. Le Page - Data Analyst/PMO">
   <meta name="description" content="Portfolio de Guillaume Le Page - Data Analyst/PMO">
-
-  <!--
-    - favicon
-  -->
   <link href="./assets/images/favicon.png" rel="icon">
   <link href="./assets/images/apple-touch-icon.png" rel="apple-touch-icon">
-
-
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-  <!--
-    - custom css link
-  -->
   <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - preload images
-  -->
-  <link rel="preload" as="image" href="./assets/images/hero-banner.jpg">
-  <!--
-    - grid style for portfolio
-  -->
-
 </head>
 
-
-
-  
 <body>
-
-  <!--
-    - #PRELOADER
-  -->
-
-
-
-
-  <!--
-    - #HEADER
-  -->
 
   <header class="header" data-header>
     <div class="container">
-
-      <a>
-
-      </a>
-
-      <button class="nav-toggle-btn" data-nav-toggler data-nav-toggle-btn aria-label="Toggle menu">
+      <button class="nav-toggle-btn" data-nav-toggler aria-label="Toggle menu">
         <span class="line line-1"></span>
         <span class="line line-2"></span>
       </button>
-
       <nav class="navbar" data-navbar>
-  <ul class="navbar-list">
-    <li><a href="#home" class="navbar-link">Home</a></li>
-    <li><a href="#portfolio" class="navbar-link">Portfolio</a></li>
-    <li><a href="#about" class="navbar-link">Expériences</a></li>
-  </ul>
-</nav>
-
+        <ul class="navbar-list">
+          <li><a href="#home" class="navbar-link">Home</a></li>
+          <li><a href="#portfolio" class="navbar-link">Portfolio</a></li>
+          <li><a href="#about" class="navbar-link">Expériences</a></li>
+        </ul>
+      </nav>
       <div class="overlay" data-nav-toggler data-overlay></div>
-
     </div>
   </header>
 
   <main>
     <article>
 
-      <!--
-        - #HERO
-      -->
-
       <section class="section hero" id="home" aria-label="home">
         <div class="container">
-
           <div class="hero-content">
-
             <h1 class="h1 hero-title">Guillaume Le Page</h1>
-            <p class="hero-subtitle">
-              Data Analyst/PMO
-            </p>
+            <p class="hero-subtitle">Data Analyst/PMO</p>
             <div class="hero-banner">
-              <img src="./assets/images/Photo_moi.jpg" width="800" height="800" alt="neil angelo martinez" class="w-100">
+              <img src="./assets/images/Photo_moi.jpg" width="800" height="800" alt="Guillaume Le Page" class="w-100">
             </div>
-
             <p class="section-text">
               Data Analyst rigoureux et méthodique, je capitalise sur mon expérience professionnelle
-diversifiée pour transformer les données en insights actionnables. Animé par le souci
-du détail et la qualité, je recherche un environnement stimulant où mettre à profit mon
-esprit analytique et mon exigence au service de la réussite collective.
+              diversifiée pour transformer les données en insights actionnables. Animé par le souci
+              du détail et la qualité, je recherche un environnement stimulant où mettre à profit mon
+              esprit analytique et mon exigence au service de la réussite collective.
             </p>
-
-
-  
             <a href="./assets/CV_GLP.pdf" target="_blank" class="btn has-before">
               <span class="span">Download CV</span>
-
               <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
             </a>
+          </div>
+        </div>
+      </section>
 
+      <section class="section portfolio" id="portfolio" aria-label="portfolio">
+        <div class="container">
+          <h2 class="h2 section-title">Portfolio</h2>
+
+          <div class="tabs">
+            <div class="tab selected" data-category="category1">Power BI</div>
+            <div class="tab" data-category="category2">Python</div>
+            <div class="tab" data-category="category3">LookerStudio</div>
+            <div class="tab" data-category="category4">Excel</div>
+          </div>
+
+          <div class="portfolio-section category1" style="display: block;">
+
+            <div style="margin-bottom: 20px;">
+              <h3 class="portfolio-project-title">Analyse de la composition de l'Assemblée Nationale</h3>
+              <div style="display: flex; gap: 40px; align-items: center;">
+                <div style="flex: 1;">
+                  <iframe title="Député" width="100%" height="400"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiNTU0MjdjNDgtYjljNS00MDNlLTllNmUtNjI4NjllZjVhMTU1IiwidCI6IjE4M2Y3NjQwLTBlZDItNGI4ZC1iMmU5LTQ2YTBhNmY3ZjhkNiJ9"
+                    frameborder="0" allowFullScreen="true" style="border-radius: 12px;"></iframe>
+                </div>
+                <div class="looker-description" style="flex: 1; padding: 20px; display: flex; flex-direction: column; justify-content: center;">
+                  <div>
+                    <h4 style="color: #4CAF50; margin: 0 0 15px 0;">Objectif</h4>
+                    <p style="margin: 0 0 30px 20px;">Création d'un <strong>dashboard interactif</strong> sur Power BI pour analyser la <strong>composition de l'Assemblée Nationale française</strong> : partis, votes, expérience et âge des députés.</p>
+                    <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Visualisations principales</h4>
+                    <ul style="margin: 0 0 30px 20px; padding: 0;">
+                      <li>Composition de l'Assemblée par partis politiques</li>
+                      <li>Votes des députés</li>
+                      <li>Expérience et âge des élus</li>
+                      <li>Analyse par parti et par député</li>
+                    </ul>
+                    <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Méthodologie</h4>
+                    <div style="margin: 0 0 30px 20px;">
+                      <p><strong>1. Collecte des données</strong> issues de data.gouv.fr</p>
+                      <p><strong>2. Web scraping</strong> des photos depuis le site de l'Assemblée Nationale</p>
+                      <p><strong>3. Structuration</strong> et nettoyage des données sur PowerQuery</p>
+                      <p><strong>4. Création</strong> du dashboard Power BI interactif</p>
+                    </div>
+                    <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Technique</h4>
+                    <ul style="margin: 0 0 30px 20px; padding: 0;">
+                      <li><strong>Web scraping</strong> : Python + BeautifulSoup</li>
+                      <li><strong>Data processing</strong> : PowerQuery</li>
+                      <li><strong>Data viz</strong> : Power BI</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 0;">
+              <h3 class="portfolio-project-title">Analyse du chômage en France (1996-2026)</h3>
+              <div style="display: flex; gap: 40px; align-items: center;">
+                <div style="flex: 1;">
+                  <iframe title="Chomage" width="100%" height="400"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiYWViYzY1ODYtZjJlZC00YWNlLThkZmItZDMyOGQ4MzUwMzUwIiwidCI6IjE4M2Y3NjQwLTBlZDItNGI4ZC1iMmU5LTQ2YTBhNmY3ZjhkNiJ9"
+                    frameborder="0" allowFullScreen="true" style="border-radius: 12px;"></iframe>
+                </div>
+                <div class="looker-description" style="flex: 1; padding: 20px; display: flex; flex-direction: column; justify-content: center;">
+                  <div>
+                    <h4 style="color: #4CAF50; margin: 0 0 15px 0;">Objectif</h4>
+                    <p style="margin: 0 0 30px 20px;">Étude approfondie de l'<strong>évolution du chômage en France entre 1996 et 2026</strong> pour mieux comprendre les dynamiques du marché du travail français et les profils les plus concernés.</p>
+                    <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Visualisations principales</h4>
+                    <ul style="margin: 0 0 30px 20px; padding: 0;">
+                      <li>Analyse par territoire (régions, départements)</li>
+                      <li>Segmentation par âge et sexe</li>
+                      <li>Analyse par niveau de formation</li>
+                      <li>Répartition par métier et ancienneté</li>
+                      <li>Comparaison au niveau européen</li>
+                    </ul>
+                    <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Méthodologie</h4>
+                    <div style="margin: 0 0 30px 20px;">
+                      <p><strong>1. Collecte des données</strong> depuis statistiques.francetravail.org</p>
+                      <p><strong>2. Nettoyage</strong> et structuration avec Power Query</p>
+                      <p><strong>3. Création</strong> du dashboard Power BI interactif</p>
+                    </div>
+                    <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Technique</h4>
+                    <ul style="margin: 0 0 30px 20px; padding: 0;">
+                      <li><strong>Data processing</strong> : Power Query</li>
+                      <li><strong>Data viz</strong> : Power BI</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="portfolio-section category2" style="display: none;">
+            <div style="margin-bottom: 20px;">
+              <h3 class="portfolio-project-title">Analyse des films sortis au cinéma en France en 2025</h3>
+              <div style="display: flex; gap: 40px; align-items: center;">
+                <div style="flex: 1;">
+                  <img src="./assets/images/cinema.jpg" alt="Analyse films"
+                    style="width: 100%; height: 400px; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="looker-description" style="flex: 1; padding: 20px; display: flex; flex-direction: column; justify-content: center;">
+                  <div>
+                    <h4 style="color: #4CAF50; margin: 0 0 15px 0;">Objectif</h4>
+                    <p style="margin: 0 0 30px 20px;">Analyse des films sortis au cinéma en France en 2025 : entrées, budget, nombre de copies, évolution semaine par semaine.</p>
+                    <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Visualisations principales</h4>
+                    <ul style="margin: 0 0 30px 20px; padding: 0;">
+                      <li>Films avec le plus d'entrées</li>
+                      <li>Films avec le plus gros budget</li>
+                      <li>Nombre de copies par film</li>
+                      <li>Évolution des entrées par semaine</li>
+                    </ul>
+                    <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Méthodologie</h4>
+                    <div style="margin: 0 0 30px 20px;">
+                      <p><strong>1. Web scraping</strong> sur cine-directors.net</p>
+                      <p><strong>2. Nettoyage</strong> des données avec Python</p>
+                      <p><strong>3. Analyse</strong> et visualisations graphiques avec Python</p>
+                    </div>
+                    <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Technique</h4>
+                    <ul style="margin: 0 0 30px 20px; padding: 0;">
+                      <li><strong>Web scraping</strong> : Python + BeautifulSoup</li>
+                      <li><strong>Data processing</strong> : Pandas</li>
+                      <li><strong>Data viz</strong> : Matplotlib / Seaborn</li>
+                    </ul>
+                    <div style="margin-top: 30px;">
+                      <a href="./assets/Python/Analysedesfilms2025.html" target="_blank"
+                        style="background: #fff; color: #000; padding: 12px 24px; border-radius: 8px; margin-right: 10px; text-decoration: none; font-weight: 600;">Démo</a>
+                      <a href="./assets/Python/CodeFilm.html" target="_blank"
+                        style="background: #000; color: #fff; padding: 12px 24px; border-radius: 8px; margin-right: 10px; text-decoration: none; font-weight: 600;">Code</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-section category3" style="display: none;">
+            <div style="margin-bottom: 20px;">
+              <h3 class="portfolio-project-title">Analyse des casteurs de la chaîne Twitch OTP</h3>
+              <div style="display: flex; gap: 40px; align-items: center;">
+                <div style="flex: 1;">
+                  <a href="https://lookerstudio.google.com/reporting/ff482874-5c95-4a44-bdd7-4ef61be03782" target="_blank">
+                    <img src="./assets/images/otp-lol-web-tv.jpg" alt="Dashboard LookerStudio"
+                      style="width: 100%; height: 400px; object-fit: cover; border-radius: 12px; cursor: pointer; transition: opacity 0.3s ease;">
+                  </a>
+                </div>
+                <div class="looker-description" style="flex: 1; padding: 20px; display: flex; flex-direction: column; justify-content: center;">
+                  <div>
+                    <h4 style="color: #4CAF50; margin: 0 0 15px 0;">Objectif</h4>
+                    <p style="margin: 0 0 30px 20px;">Création d'un <strong>dashboard interactif</strong> sur Looker Studio pour analyser l'activité des casteurs de la chaîne Twitch <strong>OTP</strong>, spécialisée dans les compétitions League of Legends.</p>
+                    <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Visualisations principales</h4>
+                    <ul style="margin: 0 0 30px 20px; padding: 0;">
+                      <li>Équipes commentées par chaque casteur</li>
+                      <li>Pauses/interruptions pendant les matchs</li>
+                      <li>Duos de casteurs les plus fréquents</li>
+                      <li>Position des casteurs (main desk, analyste...)</li>
+                      <li>Nombre total de matchs commentés</li>
+                      <li>Jours de diffusion de chaque casteur</li>
+                    </ul>
+                    <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Méthodologie</h4>
+                    <div style="margin: 0 0 30px 20px;">
+                      <p><strong>1. Web scraping</strong> sur gol.gg pour les données matchs</p>
+                      <p><strong>2. Analyse manuelle</strong> des VODs OTP (casteurs, positions, pauses)</p>
+                      <p><strong>3. Structuration</strong> sur Excel pour intégration à Looker Studio</p>
+                      <p><strong>4. Création</strong> du dashboard Looker Studio</p>
+                    </div>
+                    <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Technique</h4>
+                    <ul style="margin: 0 0 30px 20px; padding: 0;">
+                      <li><strong>Web scraping</strong> : Python + BeautifulSoup</li>
+                      <li><strong>Data processing</strong> : Pandas + Excel</li>
+                      <li><strong>Data viz</strong> : LookerStudio</li>
+                    </ul>
+                    <div style="margin-top: 30px;">
+                      <a href="https://lookerstudio.google.com/reporting/ff482874-5c95-4a44-bdd7-4ef61be03782" target="_blank"
+                        style="background: #fff; color: #000; padding: 12px 24px; border-radius: 8px; margin-right: 10px; text-decoration: none; font-weight: 600;">
+                        Voir le dashboard Looker Studio
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-section category4" style="display: none;">
+            <div style="margin-bottom: 20px;">
+              <h3 class="portfolio-project-title">Dashboard de suivi des tournées - Le Chaînon Manquant</h3>
+              <div style="display: flex; gap: 40px; align-items: center;">
+
+                <div style="flex: 1; position: relative;">
+                  <div id="carousel-lcm" style="position: relative;">
+                    <img src="./assets/images/cropped-Logo-Chainon-manquant-HD-2048x1420.png" class="carousel-slide" style="width: 100%; height: 400px; object-fit: contain; border-radius: 12px; display: block;">
+                    <img src="./assets/images/1.PNG" class="carousel-slide" style="width: 100%; height: 400px; object-fit: contain; border-radius: 12px; display: none;">
+                    <img src="./assets/images/2.PNG" class="carousel-slide" style="width: 100%; height: 400px; object-fit: contain; border-radius: 12px; display: none;">
+                    <img src="./assets/images/3.PNG" class="carousel-slide" style="width: 100%; height: 400px; object-fit: contain; border-radius: 12px; display: none;">
+                    <img src="./assets/images/4.PNG" class="carousel-slide" style="width: 100%; height: 400px; object-fit: contain; border-radius: 12px; display: none;">
+                    <img src="./assets/images/5.PNG" class="carousel-slide" style="width: 100%; height: 400px; object-fit: contain; border-radius: 12px; display: none;">
+                    <img src="./assets/images/6.PNG" class="carousel-slide" style="width: 100%; height: 400px; object-fit: contain; border-radius: 12px; display: none;">
+                    <img src="./assets/images/7.PNG" class="carousel-slide" style="width: 100%; height: 400px; object-fit: contain; border-radius: 12px; display: none;">
+                  </div>
+                  <button id="carousel-prev" style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 1.2rem; cursor: pointer; z-index: 10;">‹</button>
+                  <button id="carousel-next" style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 1.2rem; cursor: pointer; z-index: 10;">›</button>
+                  <div style="text-align: center; margin-top: 10px; color: #aaa; font-size: 0.9rem;">
+                    <span id="carousel-indicator">1 / 8</span>
+                  </div>
+                </div>
+
+                <div class="looker-description" style="flex: 1; padding: 20px; display: flex; flex-direction: column; justify-content: center;">
+                  <div>
+                    <h4 style="color: #4CAF50; margin: 0 0 15px 0;">Objectif</h4>
+                    <p style="margin: 0 0 30px 20px;">Création d'un <strong>dashboard Excel</strong> pour l'association <strong>Le Chaînon Manquant</strong> afin de suivre leurs tournées de collecte et distribution alimentaire.</p>
+                    <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Visualisations principales</h4>
+                    <ul style="margin: 0 0 30px 20px; padding: 0;">
+                      <li>Évolution du poids récolté et distribué</li>
+                      <li>Qualité des invendus collectés</li>
+                      <li>Suivi des associations/professionnels partenaires</li>
+                      <li>Annulations de tournées</li>
+                      <li>Analyse par catégorie de produits</li>
+                    </ul>
+                    <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Méthodologie</h4>
+                    <div style="margin: 0 0 30px 20px;">
+                      <p><strong>1. Collecte des données</strong> de tournées (poids récolté/distribué)</p>
+                      <p><strong>2. Structuration</strong> du fichier Excel avec formules et TCD</p>
+                      <p><strong>3. Automatisation</strong> via macro VBA pour mise à jour globale</p>
+                    </div>
+                    <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Technique</h4>
+                    <ul style="margin: 0 0 30px 20px; padding: 0;">
+                      <li><strong>Tableaux croisés dynamiques</strong> (TCD)</li>
+                      <li><strong>Formules Excel avancées</strong></li>
+                      <li><strong>Graphiques dynamiques</strong></li>
+                      <li><strong>Macro VBA</strong> : automatisation des mises à jour</li>
+                    </ul>
+                    <div style="margin-top: 30px;">
+                      <a href="./assets/Tableau LCM - github.xlsm" download
+                        style="background: #fff; color: #000; padding: 12px 24px; border-radius: 8px; margin-right: 10px; text-decoration: none; font-weight: 600;">
+                        Télécharger le fichier Excel
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
 
         </div>
       </section>
 
-<section class="section portfolio" id="portfolio" aria-label="portfolio">
-  <div id="portfolio" class="container">
-    <h2 class="h2 section-title">Portfolio</h2>
-    
-    <!-- TABS -->
-    <div class="tabs">
-      <div class="tab selected" data-category="category1">Power BI</div>
-      <div class="tab" data-category="category2">Python</div>
-      <div class="tab" data-category="category3">LookerStudio</div>
-      <div class="tab" data-category="category4">Excel</div>
+      <section class="section experiences" id="about" aria-label="experiences">
+        <div class="container">
+          <h2 class="h2 section-title">Expériences</h2>
+          <div class="experiences-list">
 
-    </div>
-    
-    <!-- ✅ POWER BI : 2 paires IFRAME + TEXTE -->
-        <!-- ✅ POWER BI -->
-    <div class="portfolio-section category1" style="display: block;">
-
-      <!-- PAIRE 1 : Députés -->
-      <div style="margin-bottom: 20px;">
-        <h3 class="portfolio-project-title">Analyse de la composition de l'Assemblée Nationale</h3>
-        <div style="display: flex; gap: 40px; align-items: center;">
-          <div style="flex: 1;">
-            <iframe title="Député" width="100%" height="400" 
-                    src="https://app.powerbi.com/view?r=eyJrIjoiNTU0MjdjNDgtYjljNS00MDNlLTllNmUtNjI4NjllZjVhMTU1IiwidCI6IjE4M2Y3NjQwLTBlZDItNGI4ZC1iMmU5LTQ2YTBhNmY3ZjhkNiJ9" 
-                    frameborder="0" allowFullScreen="true" style="border-radius: 12px;"></iframe>
-          </div>
-          <div class="looker-description" style="flex: 1; padding: 20px; display: flex; flex-direction: column; justify-content: center;">
-            <div>
-              <h4 style="color: #4CAF50; margin: 0 0 15px 0;">Objectif</h4>
-              <p style="margin: 0 0 30px 20px;">Création d'un <strong>dashboard interactif</strong> sur Power BI pour analyser la <strong>composition de l'Assemblée Nationale française</strong> : partis, votes, expérience et âge des députés.</p>
-              <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Visualisations principales</h4>
-              <ul style="margin: 0 0 30px 20px; padding: 0;">
-                <li>Composition de l'Assemblée par partis politiques</li>
-                <li>Votes des députés</li>
-                <li>Expérience et âge des élus</li>
-                <li>Analyse par parti et par député</li>
-              </ul>
-              <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Méthodologie</h4>
-              <div style="margin: 0 0 30px 20px;">
-                <p><strong>1. Collecte des données</strong> issues de data.gouv.fr</p>
-                <p><strong>2. Web scraping</strong> des photos depuis le site de l'Assemblée Nationale</p>
-                <p><strong>3. Structuration</strong> et nettoyage des données sur PowerQuery</p>
-                <p><strong>4. Création</strong> du dashboard Power BI interactif</p>
-              </div>
-              <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Technique</h4>
-              <ul style="margin: 0 0 30px 20px; padding: 0;">
-                <li><strong>Web scraping</strong> : Python + BeautifulSoup</li>
-                <li><strong>Data processing</strong> : PowerQuery</li>
-                <li><strong>Data viz</strong> : Power BI</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- PAIRE 2 : Chômage -->
-      <div style="margin-bottom: 0;">
-        <h3 class="portfolio-project-title">Analyse du chômage en France (1996-2026)</h3>
-        <div style="display: flex; gap: 40px; align-items: center;">
-          <div style="flex: 1;">
-            <iframe title="Chomage" width="100%" height="400" 
-                    src="https://app.powerbi.com/view?r=eyJrIjoiYWViYzY1ODYtZjJlZC00YWNlLThkZmItZDMyOGQ4MzUwMzUwIiwidCI6IjE4M2Y3NjQwLTBlZDItNGI4ZC1iMmU5LTQ2YTBhNmY3ZjhkNiJ9" 
-                    frameborder="0" allowFullScreen="true" style="border-radius: 12px;"></iframe>
-          </div>
-          <div class="looker-description" style="flex: 1; padding: 20px; display: flex; flex-direction: column; justify-content: center;">
-            <div>
-              <h4 style="color: #4CAF50; margin: 0 0 15px 0;">Objectif</h4>
-              <p style="margin: 0 0 30px 20px;">Étude approfondie de l'<strong>évolution du chômage en France entre 1996 et 2026</strong> pour mieux comprendre les dynamiques du marché du travail français et les profils les plus concernés.</p>
-              <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Visualisations principales</h4>
-              <ul style="margin: 0 0 30px 20px; padding: 0;">
-                <li>Analyse par territoire (régions, départements)</li>
-                <li>Segmentation par âge et sexe</li>
-                <li>Analyse par niveau de formation</li>
-                <li>Répartition par métier et ancienneté</li>
-                <li>Comparaison au niveau européen</li>
-              </ul>
-              <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Méthodologie</h4>
-              <div style="margin: 0 0 30px 20px;">
-                <p><strong>1. Collecte des données</strong> depuis statistiques.francetravail.org</p>
-                <p><strong>2. Nettoyage</strong> et structuration avec Power Query</p>
-                <p><strong>3. Création</strong> du dashboard Power BI interactif</p>
-              </div>
-              <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Technique</h4>
-              <ul style="margin: 0 0 30px 20px; padding: 0;">
-                <li><strong>Data processing</strong> : Power Query</li>
-                <li><strong>Data viz</strong> : Power BI</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div> <!-- ← FIN category1 -->
-
-
-    <!-- ✅ PYTHON -->
-    <div class="portfolio-section category2" style="display: none;">
-      <div style="margin-bottom: 20px;">
-        <h3 class="portfolio-project-title">Analyse des films sortis au cinéma en France en 2025</h3>
-        <div style="display: flex; gap: 40px; align-items: center;">
-          <div style="flex: 1;">
-            <img src="./assets/images/cinema.jpg" alt="Analyse films" 
-                 style="width: 100%; height: 400px; object-fit: cover; border-radius: 12px;">
-          </div>
-          <div class="looker-description" style="flex: 1; padding: 20px; display: flex; flex-direction: column; justify-content: center;">
-            <div>
-              <h4 style="color: #4CAF50; margin: 0 0 15px 0;">Objectif</h4>
-              <p style="margin: 0 0 30px 20px;">Analyse des films sortis au cinéma en France en 2025 : entrées, budget, nombre de copies, évolution semaine par semaine.</p>
-              <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Visualisations principales</h4>
-              <ul style="margin: 0 0 30px 20px; padding: 0;">
-                <li>Films avec le plus d'entrées</li>
-                <li>Films avec le plus gros budget</li>
-                <li>Nombre de copies par film</li>
-                <li>Évolution des entrées par semaine</li>
-              </ul>
-              <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Méthodologie</h4>
-              <div style="margin: 0 0 30px 20px;">
-                <p><strong>1. Web scraping</strong> sur cine-directors.net</p>
-                <p><strong>2. Nettoyage</strong> des données avec Python</p>
-                <p><strong>3. Analyse</strong> et visualisations graphiques avec Python</p>
-              </div>
-              <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Technique</h4>
-              <ul style="margin: 0 0 30px 20px; padding: 0;">
-                <li><strong>Web scraping</strong> : Python + BeautifulSoup</li>
-                <li><strong>Data processing</strong> : Pandas</li>
-                <li><strong>Data viz</strong> : Matplotlib / Seaborn</li>
-              </ul>
-              <div style="margin-top: 30px;">
-                <a href="./assets/Python/Analysedesfilms2025.html" target="_blank" 
-                   style="background: #fff; color: #000; padding: 12px 24px; border-radius: 8px; margin-right: 10px; text-decoration: none; font-weight: 600;">Démo</a>
-                <a href="./assets/Python/CodeFilm.html" target="_blank" 
-                   style="background: #000; color: #fff; padding: 12px 24px; border-radius: 8px; margin-right: 10px; text-decoration: none; font-weight: 600;">Code</a>
+            <div class="experience-card">
+              <img src="./assets/images/paris2024.jpg" alt="Paris2024" class="experience-img">
+              <div class="experience-details">
+                <h3>CHEF DE PROJET MAINTENANCE</h3>
+                <strong>Paris2024 — 2024 (6 mois)</strong>
+                <p>Mission au sein de l'équipe maintenance des sites olympiques :</p>
+                <ul>
+                  <li>Pilotage et suivi de 35 personnes travaillant sur les sites olympiques</li>
+                  <li>Management d'une équipe centrale de 4 personnes</li>
+                  <li>Supervision de la plateforme Safescore (suivi des interventions, rondes de vérifications, températures des sites)</li>
+                  <li>Gestion d'un tableau de bord PowerBI et reporting quotidien pour les directeurs de sites</li>
+                </ul>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div> <!-- ← FIN category2 -->
 
-
-    <!-- ✅ LOOKER STUDIO -->
-    <div class="portfolio-section category3" style="display: none;">
-      <div style="margin-bottom: 20px;">
-        <h3 class="portfolio-project-title">Analyse des casteurs de la chaîne Twitch OTP</h3>
-        <div style="display: flex; gap: 40px; align-items: center;">
-          <div style="flex: 1;">
-            <a href="https://lookerstudio.google.com/reporting/ff482874-5c95-4a44-bdd7-4ef61be03782" target="_blank">
-              <img src="./assets/images/otp-lol-web-tv.jpg" alt="Dashboard LookerStudio" 
-                   style="width: 100%; height: 400px; object-fit: cover; border-radius: 12px; cursor: pointer; transition: opacity 0.3s ease;">
-            </a>
-          </div>
-          <div class="looker-description" style="flex: 1; padding: 20px; display: flex; flex-direction: column; justify-content: center;">
-            <div>
-              <h4 style="color: #4CAF50; margin: 0 0 15px 0;">Objectif</h4>
-              <p style="margin: 0 0 30px 20px;">Création d'un <strong>dashboard interactif</strong> sur Looker Studio pour analyser l'activité des casteurs de la chaîne Twitch <strong>OTP</strong>, spécialisée dans les compétitions League of Legends.</p>
-              <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Visualisations principales</h4>
-              <ul style="margin: 0 0 30px 20px; padding: 0;">
-                <li>Équipes commentées par chaque casteur</li>
-                <li>Pauses/interruptions pendant les matchs</li>
-                <li>Duos de casteurs les plus fréquents</li>
-                <li>Position des casteurs (main desk, analyste...)</li>
-                <li>Nombre total de matchs commentés</li>
-                <li>Jours de diffusion de chaque casteur</li>
-              </ul>
-              <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Méthodologie</h4>
-              <div style="margin: 0 0 30px 20px;">
-                <p><strong>1. Web scraping</strong> sur gol.gg pour les données matchs</p>
-                <p><strong>2. Analyse manuelle</strong> des VODs OTP (casteurs, positions, pauses)</p>
-                <p><strong>3. Structuration</strong> sur Excel pour intégration à Looker Studio</p>
-                <p><strong>4. Création</strong> du dashboard Looker Studio</p>
-              </div>
-              <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Technique</h4>
-              <ul style="margin: 0 0 30px 20px; padding: 0;">
-                <li><strong>Web scraping</strong> : Python + BeautifulSoup</li>
-                <li><strong>Data processing</strong> : Pandas + Excel</li>
-                <li><strong>Data viz</strong> : LookerStudio</li>
-              </ul>
-              <div style="margin-top: 30px;">
-                <a href="https://lookerstudio.google.com/reporting/ff482874-5c95-4a44-bdd7-4ef61be03782" target="_blank" 
-                   style="background: #fff; color: #000; padding: 12px 24px; border-radius: 8px; margin-right: 10px; text-decoration: none; font-weight: 600;">
-                  Voir le dashboard Looker Studio
-                </a>
+            <div class="experience-card">
+              <img src="./assets/images/pcs.jpg" alt="Project Conquerors" class="experience-img">
+              <div class="experience-details">
+                <h3>DATA ANALYST</h3>
+                <strong>Project Conquerors — 2023/2024 (1,5 ans)</strong>
+                <p>Mission au sein d'une équipe d'e-sport sur le jeu League of Legends :</p>
+                <ul>
+                  <li>Extraction, nettoyage et analyse de données avec Python (API/Web scraping)</li>
+                  <li>Création de rapports (Power BI, LookerStudio, Excel)</li>
+                  <li>Soutien à la prise de décision des coachs</li>
+                </ul>
               </div>
             </div>
+
+            <div class="experience-card">
+              <img src="./assets/images/vinci-autoroutes.jpg" alt="Vinci Autoroutes" class="experience-img">
+              <div class="experience-details">
+                <h3>MAITRE D'OUVRAGE</h3>
+                <strong>Vinci Autoroutes — 2022/2024 (1,5 ans)</strong>
+                <p>Mission au sein de la Direction de la Maitrise d'Ouvrage sur le Duplex de l'A86 :</p>
+                <ul>
+                  <li>Gestion du Programme de Maintien en Conditions Opérationnelles (PMCO - remplacement de 150 000 équipements)</li>
+                  <li>Suivi du planning, du budget et des réunions pour le PMCO</li>
+                  <li>Préparation et présentation du comité d'engagement annuel</li>
+                  <li>Préparation des phases d'études et suivi des travaux</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-card">
+              <img src="./assets/images/croix-blanche.jpg" alt="Croix Blanche" class="experience-img">
+              <div class="experience-details">
+                <h3>SECOURISTE</h3>
+                <strong>La Croix Blanche — 2020/2022 (1,5 ans)</strong>
+                <p>Mission de prévention COVID à l'aéroport Charles de Gaulle</p>
+              </div>
+            </div>
+
+            <div class="experience-card">
+              <img src="./assets/images/mbda.jpg" alt="MBDA" class="experience-img">
+              <div class="experience-details">
+                <h3>PROJECT MANAGER OFFICER</h3>
+                <strong>MBDA — 2017/2020 (3 ans)</strong>
+                <p>Mission sur un projet de développement de missile (MMP/Aster15) :</p>
+                <ul>
+                  <li>Structuration des projets (WBS, CBS, etc.)</li>
+                  <li>Gestion de la performance des projets (délais, ressources, coûts)</li>
+                  <li>Préparation et présentation des Prévisions à Fin d'Affaires biannuel</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-card">
+              <img src="./assets/images/renault.jpg" alt="Renault Dacia" class="experience-img">
+              <div class="experience-details">
+                <h3>INGENIEUR PROJET JUNIOR</h3>
+                <strong>Renault — 2015/2016 (8 mois)</strong>
+                <p>Mission sur un projet de développement d'un nouveau véhicule pour Dacia (Duster) :</p>
+                <ul>
+                  <li>Pilotage de l'avancement du projet (planning et tableau de bord avec KPI)</li>
+                </ul>
+              </div>
+            </div>
+
           </div>
         </div>
-      </div>
-    </div> <!-- ← FIN category3 -->
+      </section>
 
-
-    <!-- ✅ EXCEL -->
-   <!-- ✅ EXCEL -->
-<div class="portfolio-section category4" style="display: none;">
-  <div style="margin-bottom: 20px;">
-    <h3 class="portfolio-project-title">Dashboard de suivi des tournées - Le Chaînon Manquant</h3>
-    <div style="display: flex; gap: 40px; align-items: center;">
-
-      <!-- CARROUSEL gauche -->
-      <div style="flex: 1; position: relative;">
-        
-        <!-- Images -->
-        <div id="carousel-lcm" style="position: relative;">
-          <img src="./assets/images/cropped-Logo-Chainon-manquant-HD-2048x1420.png" class="carousel-slide" style="width: 100%; height: 400px; object-fit: contain; border-radius: 12px; display: block;">
-          <img src="./assets/images/1.PNG" class="carousel-slide" style="width: 100%; height: 400px; object-fit: contain; border-radius: 12px; display: none;">
-          <img src="./assets/images/2.PNG" class="carousel-slide" style="width: 100%; height: 400px; object-fit: contain; border-radius: 12px; display: none;">
-          <img src="./assets/images/3.PNG" class="carousel-slide" style="width: 100%; height: 400px; object-fit: contain; border-radius: 12px; display: none;">
-          <img src="./assets/images/4.PNG" class="carousel-slide" style="width: 100%; height: 400px; object-fit: contain; border-radius: 12px; display: none;">
-          <img src="./assets/images/5.PNG" class="carousel-slide" style="width: 100%; height: 400px; object-fit: contain; border-radius: 12px; display: none;">
-          <img src="./assets/images/6.PNG" class="carousel-slide" style="width: 100%; height: 400px; object-fit: contain; border-radius: 12px; display: none;">
-          <img src="./assets/images/7.PNG" class="carousel-slide" style="width: 100%; height: 400px; object-fit: contain; border-radius: 12px; display: none;">
-        </div>
-
-        <!-- Flèches -->
-<button id="carousel-prev" style="position: absolute; top: 50%; left: 0; transform: translateY(-50%);
-  background: rgba(0,0,0,0.5); color: #fff; border: none; border-radius: 50%;
-  width: 40px; height: 40px; font-size: 1.2rem; cursor: pointer; z-index: 10;">‹</button>
-<button id="carousel-next" style="position: absolute; top: 50%; right: 0; transform: translateY(-50%);
-  background: rgba(0,0,0,0.5); color: #fff; border: none; border-radius: 50%;
-  width: 40px; height: 40px; font-size: 1.2rem; cursor: pointer; z-index: 10;">›</button>
-
-        <!-- Indicateur -->
-        <div style="text-align: center; margin-top: 10px; color: #aaa; font-size: 0.9rem;">
-          <span id="carousel-indicator">1 / 8</span>
-        </div>
-
-      </div>
-
-      <!-- TEXTE droite -->
-      <div class="looker-description" style="flex: 1; padding: 20px; display: flex; flex-direction: column; justify-content: center;">
-        <div>
-          <h4 style="color: #4CAF50; margin: 0 0 15px 0;">Objectif</h4>
-          <p style="margin: 0 0 30px 20px;">Création d'un <strong>dashboard Excel</strong> pour l'association <strong>Le Chaînon Manquant</strong> afin de suivre leurs tournées de collecte et distribution alimentaire.</p>
-          <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Visualisations principales</h4>
-          <ul style="margin: 0 0 30px 20px; padding: 0;">
-            <li>Évolution du poids récolté et distribué</li>
-            <li>Qualité des invendus collectés</li>
-            <li>Suivi des associations/professionnels partenaires</li>
-            <li>Annulations de tournées</li>
-            <li>Analyse par catégorie de produits</li>
-          </ul>
-          <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Méthodologie</h4>
-          <div style="margin: 0 0 30px 20px;">
-            <p><strong>1. Collecte des données</strong> de tournées (poids récolté/distribué)</p>
-            <p><strong>2. Structuration</strong> du fichier Excel avec formules et TCD</p>
-            <p><strong>3. Automatisation</strong> via macro VBA pour mise à jour globale</p>
-          </div>
-          <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Technique</h4>
-          <ul style="margin: 0 0 30px 20px; padding: 0;">
-            <li><strong>Tableaux croisés dynamiques</strong> (TCD)</li>
-            <li><strong>Formules Excel avancées</strong></li>
-            <li><strong>Graphiques dynamiques</strong></li>
-            <li><strong>Macro VBA</strong> : automatisation des mises à jour</li>
-          </ul>
-          <div style="margin-top: 30px;">
-            <a href="./assets/Tableau LCM - github.xlsm" download 
-               style="background: #fff; color: #000; padding: 12px 24px; border-radius: 8px; margin-right: 10px; text-decoration: none; font-weight: 600;">
-              Télécharger le fichier Excel
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div> <!-- ← FIN category4 -->
- <!-- ← FIN category4 -->
-
-
-
-
-</section>
-
-
-
-
-      
-<section class="section experiences" id="about" aria-label="experiences">
-  <div id="about" class="container">
-    <h2 class="h2 section-title">Expériences</h2>
-    <div class="experiences-list">
-
-<div class="experience-card">
-  <img src="./assets/images/paris2024.jpg" alt="Paris2024" class="experience-img">
-  <div class="experience-details">
-    <h3>CHEF DE PROJET MAINTENANCE</h3>
-    <strong>Paris2024 — 2024 (6 mois)</strong>
-    <strong></strong>
-    <p>Mission au sein de l’équipe maintenance des sites olympiques :</p>
-    <ul>
-      <li>Pilotage et suivi de 35 personnes travaillant sur les sites olympiques</li>
-      <li>Management d’une équipe centrale de 4 personnes</li>
-      <li>Supervision de la plateforme Safescore (outil de suivi des demandes d’interventions, des rondes de vérifications, des températures des sites)</li>
-      <li>Gestion et administration d’un tableau de bord PowerBI utilisant les données de Safescore et reporting quotidien pour les directeurs de sites</li>
-    </ul>
-  </div>
-</div>
-
-<!-- 2023-2024 - DATA ANALYST -->
-<div class="experience-card">
-  <img src="./assets/images/pcs.jpg" alt="Project Conquerors" class="experience-img">
-  <div class="experience-details">
-    <h3>DATA ANALYST</h3>
-    <strong>Project Conquerors — 2023/2024 (1,5 ans)</strong>
-
-    <p>Mission au sein d’une équipe d’e-sport sur le jeu League of Legends :</p>
-    <ul>
-      <li>Extraction, nettoyage et analyse de données avec Python (API/Web scraping)</li>
-      <li>Création de rapports (Power BI, LookerStudio, Excel)</li>
-      <li>Soutien à la prise de décision des coachs</li>
-    </ul>
-  </div>
-</div>
-
-<!-- 2022-2024 - MAITRE D’OUVRAGE -->
-<div class="experience-card">
-  <img src="./assets/images/vinci-autoroutes.jpg" alt="Vinci Autoroutes" class="experience-img">
-  <div class="experience-details">
-    <h3>MAITRE D’OUVRAGE</h3>
-    <strong>Vinci Autoroutes — 2022/2024 (1,5 ans)</strong>
-    <p>Mission au sein de la Direction de la Maitrise d’Ouvrage sur le Duplex de l’A86 :</p>
-    <ul>
-      <li>Gestion du Programme de Maintien en Conditions Opérationnelles (PMCO - remplacement de 150 000 équipements)</li>
-      <li>Suivi du planning, du budget et des réunions pour le PMCO</li>
-      <li>Préparation et présentation du comité d’engagement annuel</li>
-      <li>Préparation des phases d’études et suivi des travaux</li>
-    </ul>
-  </div>
-</div>
-
-<!-- 2020-2022 - SECOURISTE -->
-<div class="experience-card">
-  <img src="./assets/images/croix-blanche.jpg" alt="Croix Blanche" class="experience-img">
-  <div class="experience-details">
-    <h3>SECOURISTE</h3>
-    <strong>La Croix Blance — 2020/2022 (1,5 ans)</strong>
-
-    <p>Mission de prévention COVID à l’aéroport Charles de Gaulle</p>
-  </div>
-</div>
-
-<!-- 2017–2020 - PROJECT MANAGER OFFICER -->
-<div class="experience-card">
-  <img src="./assets/images/mbda.jpg" alt="MBDA" class="experience-img">
-  <div class="experience-details">
-    <h3>PROJECT MANAGER OFFICER</h3>
-    <strong>MBDA — 2017/2020 (3 ans)</strong>
-
-    <p>Mission sur un projet de développement de missile (MMP/Aster15) :</p>
-    <ul>
-      <li>Structuration des projets (WBS, CBS, etc.)</li>
-      <li>Gestion de la performance des projets (délais, ressources, coûts)</li>
-      <li>Préparation et présentation des Prévisions à Fin d’Affaires biannuel</li>
-    </ul>
-  </div>
-</div>
-
-<!-- 2015–2016 - INGENIEUR PROJET JUNIOR -->
-<div class="experience-card">
-  <img src="./assets/images/renault.jpg" alt="Renault Dacia" class="experience-img">
-  <div class="experience-details">
-    <h3>INGENIEUR PROJET JUNIOR</h3>
-    <strong>Renault — 2015/2016 (8 mois)</strong>
-
-    <p>Mission sur un projet de développement d’un nouveau véhicule pour Dacia (Duster) :</p>
-    <ul>
-      <li>Pilotage de l’avancement du projet (Planning et tableau de bord avec KPI)</li>
-    </ul>
-  </div>
-</div>
-    </div>
-  </div>
-</section>
-            
     </article>
   </main>
-   <script>
-  document.addEventListener('DOMContentLoaded', function() {
 
-    // TABS
-    const tabs = document.querySelectorAll('.tab');
-    const sections = document.querySelectorAll('.portfolio-section');
-    tabs.forEach(function(tab) {
-      tab.addEventListener('click', function() {
-        const category = this.getAttribute('data-category');
-        tabs.forEach(function(t) { t.classList.remove('selected'); });
-        this.classList.add('selected');
-        sections.forEach(function(section) {
-          section.style.display = section.classList.contains(category) ? 'block' : 'none';
+  <div id="carousel-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 9999; justify-content: center; align-items: center;">
+    <div style="position: relative; width: 80%; max-width: 1100px;">
+      <img id="modal-img" src="" style="width: 100%; max-height: 80vh; object-fit: contain; border-radius: 12px;">
+      <button id="modal-prev" style="position: absolute; top: 50%; left: -50px; transform: translateY(-50%); background: rgba(255,255,255,0.2); color: #fff; border: none; border-radius: 50%; width: 45px; height: 45px; font-size: 1.5rem; cursor: pointer;">‹</button>
+      <button id="modal-next" style="position: absolute; top: 50%; right: -50px; transform: translateY(-50%); background: rgba(255,255,255,0.2); color: #fff; border: none; border-radius: 50%; width: 45px; height: 45px; font-size: 1.5rem; cursor: pointer;">›</button>
+      <button id="modal-close" style="position: absolute; top: -40px; right: 0; background: transparent; color: #fff; border: none; font-size: 1.8rem; cursor: pointer;">✕</button>
+      <div style="text-align: center; margin-top: 10px; color: #aaa; font-size: 0.9rem;">
+        <span id="modal-indicator">1 / 8</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      const tabs = document.querySelectorAll('.tab');
+      const sections = document.querySelectorAll('.portfolio-section');
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          const category = this.getAttribute('data-category');
+          tabs.forEach(function (t) { t.classList.remove('selected'); });
+          this.classList.add('selected');
+          sections.forEach(function (section) {
+            section.style.display = section.classList.contains(category) ? 'block' : 'none';
+          });
         });
       });
-    });
 
-    // CARROUSEL
-    let carouselIndex = 0;
-    const getSlides = () => document.querySelectorAll('#carousel-lcm .carousel-slide');
-    const getSrcs = () => Array.from(getSlides()).map(img => img.src);
+      let carouselIndex = 0;
+      const getSlides = () => document.querySelectorAll('#carousel-lcm .carousel-slide');
+      const getSrcs = () => Array.from(getSlides()).map(img => img.src);
 
-    function updateCarousel(index) {
-      const slides = getSlides();
-      slides.forEach(s => s.style.display = 'none');
-      slides[index].style.display = 'block';
-      document.getElementById('carousel-indicator').textContent = (index + 1) + ' / ' + slides.length;
-    }
-
-    document.getElementById('carousel-prev').addEventListener('click', function() {
-      carouselIndex = (carouselIndex - 1 + getSlides().length) % getSlides().length;
-      updateCarousel(carouselIndex);
-    });
-
-    document.getElementById('carousel-next').addEventListener('click', function() {
-      carouselIndex = (carouselIndex + 1) % getSlides().length;
-      updateCarousel(carouselIndex);
-    });
-
-    // MODALE
-    let modalIndex = 0;
-    const modal = document.getElementById('carousel-modal');
-    const modalImg = document.getElementById('modal-img');
-    const modalIndicator = document.getElementById('modal-indicator');
-
-    function openModal(index) {
-      modalIndex = index;
-      const srcs = getSrcs();
-      modal.style.display = 'flex';
-      modalImg.src = srcs[modalIndex];
-      modalIndicator.textContent = (modalIndex + 1) + ' / ' + srcs.length;
-    }
-
-    function updateModal(index) {
-      const srcs = getSrcs();
-      modalIndex = (index + srcs.length) % srcs.length;
-      modalImg.src = srcs[modalIndex];
-      modalIndicator.textContent = (modalIndex + 1) + ' / ' + srcs.length;
-    }
-
-    // Clic sur image du carrousel → ouvre modale
-    getSlides().forEach(function(slide, i) {
-      slide.style.cursor = 'zoom-in';
-      slide.addEventListener('click', function() { openModal(i); });
-    });
-
-    document.getElementById('modal-prev').addEventListener('click', function() { updateModal(modalIndex - 1); });
-    document.getElementById('modal-next').addEventListener('click', function() { updateModal(modalIndex + 1); });
-    document.getElementById('modal-close').addEventListener('click', function() { modal.style.display = 'none'; });
-
-    // Fermer en cliquant sur le fond
-    modal.addEventListener('click', function(e) {
-      if (e.target === modal) modal.style.display = 'none';
-    });
-
-    // Navigation clavier
-    document.addEventListener('keydown', function(e) {
-      if (modal.style.display === 'flex') {
-        if (e.key === 'ArrowRight') updateModal(modalIndex + 1);
-        if (e.key === 'ArrowLeft') updateModal(modalIndex - 1);
-        if (e.key === 'Escape') modal.style.display = 'none';
+      function updateCarousel(index) {
+        const slides = getSlides();
+        slides.forEach(s => s.style.display = 'none');
+        slides[index].style.display = 'block';
+        document.getElementById('carousel-indicator').textContent = (index + 1) + ' / ' + slides.length;
       }
+
+      document.getElementById('carousel-prev').addEventListener('click', function () {
+        carouselIndex = (carouselIndex - 1 + getSlides().length) % getSlides().length;
+        updateCarousel(carouselIndex);
+      });
+
+      document.getElementById('carousel-next').addEventListener('click', function () {
+        carouselIndex = (carouselIndex + 1) % getSlides().length;
+        updateCarousel(carouselIndex);
+      });
+
+      let modalIndex = 0;
+      const modal = document.getElementById('carousel-modal');
+      const modalImg = document.getElementById('modal-img');
+      const modalIndicator = document.getElementById('modal-indicator');
+
+      function openModal(index) {
+        modalIndex = index;
+        const srcs = getSrcs();
+        modal.style.display = 'flex';
+        modalImg.src = srcs[modalIndex];
+        modalIndicator.textContent = (modalIndex + 1) + ' / ' + srcs.length;
+      }
+
+      function updateModal(index) {
+        const srcs = getSrcs();
+        modalIndex = (index + srcs.length) % srcs.length;
+        modalImg.src = srcs[modalIndex];
+        modalIndicator.textContent = (modalIndex + 1) + ' / ' + srcs.length;
+      }
+
+      getSlides().forEach(function (slide, i) {
+        slide.style.cursor = 'zoom-in';
+        slide.addEventListener('click', function () { openModal(i); });
+      });
+
+      document.getElementById('modal-prev').addEventListener('click', function () { updateModal(modalIndex - 1); });
+      document.getElementById('modal-next').addEventListener('click', function () { updateModal(modalIndex + 1); });
+      document.getElementById('modal-close').addEventListener('click', function () { modal.style.display = 'none'; });
+
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) modal.style.display = 'none';
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (modal.style.display === 'flex') {
+          if (e.key === 'ArrowRight') updateModal(modalIndex + 1);
+          if (e.key === 'ArrowLeft') updateModal(modalIndex - 1);
+          if (e.key === 'Escape') modal.style.display = 'none';
+        }
+      });
+
     });
 
-  });
-</script>
-<!-- MODALE CARROUSEL -->
-<div id="carousel-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
-  background:rgba(0,0,0,0.85); z-index:9999; justify-content:center; align-items:center;">
-  
-  <div style="position:relative; width:80%; max-width:1100px;">
-    
-    <!-- Image agrandie -->
-    <img id="modal-img" src="" style="width:100%; max-height:80vh; object-fit:contain; border-radius:12px;">
-    
-    <!-- Flèche gauche -->
-    <button id="modal-prev" style="position:absolute; top:50%; left:-50px; transform:translateY(-50%);
-      background:rgba(255,255,255,0.2); color:#fff; border:none; border-radius:50%;
-      width:45px; height:45px; font-size:1.5rem; cursor:pointer;">‹</button>
-    
-    <!-- Flèche droite -->
-    <button id="modal-next" style="position:absolute; top:50%; right:-50px; transform:translateY(-50%);
-      background:rgba(255,255,255,0.2); color:#fff; border:none; border-radius:50%;
-      width:45px; height:45px; font-size:1.5rem; cursor:pointer;">›</button>
-
-    <!-- Fermer -->
-    <button id="modal-close" style="position:absolute; top:-40px; right:0;
-      background:transparent; color:#fff; border:none; font-size:1.8rem; cursor:pointer;">✕</button>
-
-    <!-- Indicateur -->
-    <div style="text-align:center; margin-top:10px; color:#aaa; font-size:0.9rem;">
-      <span id="modal-indicator">1 / 8</span>
-    </div>
-
-  </div>
-</div>
-<script>
-  // TEST NAVBAR ULTRA SIMPLE
-  document.querySelector(".nav-toggle-btn").onclick = function() {
-    console.log("onclick fonctionne !");
-    document.querySelector("[data-navbar]").classList.toggle("active");
-    this.classList.toggle("active");
-    document.querySelector("[data-overlay]").classList.toggle("active");
-    document.body.classList.toggle("nav-active");
-  };
-</script>
+    document.querySelector('.nav-toggle-btn').onclick = function () {
+      document.querySelector('[data-navbar]').classList.toggle('active');
+      this.classList.toggle('active');
+      document.querySelector('[data-overlay]').classList.toggle('active');
+      document.body.classList.toggle('nav-active');
+    };
+  </script>
 
 </body>
 </html>
