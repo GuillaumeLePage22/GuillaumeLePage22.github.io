@@ -621,7 +621,16 @@ esprit analytique et mon exigence au service de la réussite collective.
 
   </div>
 </div>
-
+<script>
+  // TEST NAVBAR ULTRA SIMPLE
+  document.querySelector(".nav-toggle-btn").onclick = function() {
+    console.log("onclick fonctionne !");
+    document.querySelector("[data-navbar]").classList.toggle("active");
+    this.classList.toggle("active");
+    document.querySelector("[data-overlay]").classList.toggle("active");
+    document.body.classList.toggle("nav-active");
+  };
+</script>
 
 </body>
 </html>
