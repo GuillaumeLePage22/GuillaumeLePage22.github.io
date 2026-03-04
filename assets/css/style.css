@@ -1182,9 +1182,9 @@ visibility: hidden;
   border-top: 1px solid rgba(255,255,255,0.15) !important;
 }
 section.portfolio {
-  padding-bottom: 0 !important;
+  padding-bottom: 40px !important;
 }
 
 section.experiences {
-  padding-top: 0 !important;
+  padding-top: 40px !important;
 }
