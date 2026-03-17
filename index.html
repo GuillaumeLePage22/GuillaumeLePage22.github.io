@@ -157,27 +157,33 @@
                 <div class="looker-description" style="flex: 1; padding: 20px; display: flex; flex-direction: column; justify-content: center;">
                   <div>
                     <h4 style="color: #4CAF50; margin: 0 0 15px 0;">Objectif</h4>
-                    <p style="margin: 0 0 30px 20px;">Étude approfondie de l'<strong>évolution du chômage en France entre 1996 et 2026</strong> pour mieux comprendre les dynamiques du marché du travail français et les profils les plus concernés.</p>
+                    <p style="margin: 0 0 30px 20px;">Création d'un <strong>dashboard interactif</strong> sur Power BI pour analyser l'<strong>évolution de la délinquance</strong> en France métropolitaine (2016-2025) : tendances par type d'infraction, profils victimes/mis en cause, et disparités territoriales.</p>
+                    
                     <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Visualisations principales</h4>
                     <ul style="margin: 0 0 30px 20px; padding: 0;">
-                      <li>Analyse par territoire (régions, départements)</li>
-                      <li>Segmentation par âge et sexe</li>
-                      <li>Analyse par niveau de formation</li>
-                      <li>Répartition par métier et ancienneté</li>
-                      <li>Comparaison au niveau européen</li>
+                      <li>Évolution temporelle des crimes/délits par type (violences, vols, stupéfiants...)</li>
+                      <li>Profils victimes et mis en cause en 2025</li>
+                      <li>Analyse géographique par département et région</li>
+                      <li>KPI variation 2016 vs 2025 avec slicers dynamiques</li>
                     </ul>
+                    
                     <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Méthodologie</h4>
                     <div style="margin: 0 0 30px 20px;">
-                      <p><strong>1. Collecte des données</strong> depuis statistiques.francetravail.org</p>
-                      <p><strong>2. Nettoyage</strong> et structuration avec Power Query</p>
-                      <p><strong>3. Création</strong> du dashboard Power BI interactif</p>
+                      <p><strong>1. Collecte des données</strong> SSMSI/INSEE (victimes, infractions, mis en cause, véhicules)</p>
+                      <p><strong>2. Nettoyage et structuration</strong> via PowerQuery</p>
+                      <p><strong>3. Mesures DAX avancées</strong> : rangs dynamiques, variations %, top N par année/plage</p>
+                      <p><strong>4. Dashboard interactif</strong> Power BI avec slicers Année/Délinquance</p>
                     </div>
-                    <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Technique</h4>
+                    
+                    <h4 style="color: #4CAF50; margin: 30px 0 15px 0;">Techniques</h4>
                     <ul style="margin: 0 0 30px 20px; padding: 0;">
-                      <li><strong>Data processing</strong> : Power Query</li>
-                      <li><strong>Data viz</strong> : Power BI</li>
+                      <li><strong>Data processing</strong> : PowerQuery + DAX (RANKX, CALCULATE, ALL)</li>
+                      <li><strong>Visualisations avancées</strong> : lignes multiples, petits multiples, KPI, cartes choroplèthes</li>
+                      <li><strong>Interactivité</strong> : slicers plage Année, tri dynamique tooltips/légendes</li>
+                      <li><strong>Optimisation</strong> : hiérarchie types Délinquance, tooltips enrichis</li>
                     </ul>
                   </div>
+
                 </div>
               </div>
             </div>
