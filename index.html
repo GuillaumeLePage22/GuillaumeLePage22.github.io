@@ -61,7 +61,11 @@
               du détail et la qualité, je recherche un environnement stimulant où mettre à profit mon
               esprit analytique et mon exigence au service de la réussite collective.
             </p>
-            <a href="./assets/CV_GLP.pdf" target="_blank" class="btn has-before">
+            <a href="./assets/CV_GLP.pdf" target="_blank" class="btn has-before"
+   onclick="gtag('event', 'download_cv', {'file_name': 'CV_GLP.pdf'});">
+  <span class="span">Download CV</span>
+  <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+</a>
               <span class="span">Download CV</span>
               <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
             </a>
@@ -74,10 +78,22 @@
           <h2 class="h2 section-title">Portfolio</h2>
 
           <div class="tabs">
-            <div class="tab selected" data-category="category1">Power BI</div>
-            <div class="tab" data-category="category2">Python</div>
-            <div class="tab" data-category="category3">LookerStudio</div>
-            <div class="tab" data-category="category4">Excel</div>
+            <div class="tab selected" data-category="category1"
+     onclick="gtag('event', 'change_tab_portfolio', {'tab_name': 'Power BI'});">
+  Power BI
+</div>
+<div class="tab" data-category="category2"
+     onclick="gtag('event', 'change_tab_portfolio', {'tab_name': 'Python'});">
+  Python
+</div>
+<div class="tab" data-category="category3"
+     onclick="gtag('event', 'change_tab_portfolio', {'tab_name': 'LookerStudio'});">
+  LookerStudio
+</div>
+<div class="tab" data-category="category4"
+     onclick="gtag('event', 'change_tab_portfolio', {'tab_name': 'Excel'});">
+  Excel
+</div>
           </div>
 
           <div class="portfolio-section category1" style="display: block;">
